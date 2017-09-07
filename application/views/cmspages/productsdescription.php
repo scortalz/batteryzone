@@ -19,8 +19,8 @@
 
         <td>b</td>
         <td>c</td>
-        <td>d</td>
-        <td>e</td>
+        <td>d2</td>
+        <td>1</td>
         <td>  
         <a class="btn btn-info btn-xs" type="button" id="" name=""  data-toggle="modal" value="" data-target="#">Edit</a>
         <a href="" 
