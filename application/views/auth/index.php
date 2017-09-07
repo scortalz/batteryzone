@@ -648,7 +648,15 @@ $(document).ready(function() {
               "processing": true
 
         });
-          
+
+        
+        $('#productdesTable').DataTable(
+        {
+              "searching": true,
+              "processing": true
+
+        });
+
 });
     
 
