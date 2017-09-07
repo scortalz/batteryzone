@@ -14,13 +14,13 @@
     <tbody>
       <tr>
  
-        <td>1</td>
+        <td>a</td>
         
 
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
+        <td>b</td>
+        <td>c</td>
+        <td>d</td>
+        <td>e</td>
         <td>  
         <a class="btn btn-info btn-xs" type="button" id="" name=""  data-toggle="modal" value="" data-target="#">Edit</a>
         <a href="" 
