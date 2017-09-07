@@ -73,7 +73,7 @@
                         <?php foreach ($category as $cat){ ?>
     
 
-               <a class="btn btn-secondary" href="#" role="button"><?php echo $cat['cat_name']; ?></a> 
+               <a class="btn btn-secondary" href="<?php echo base_url().'Home/subcat/'.$cat['cat_id'];?>" role="button"><?php echo $cat['cat_name']; ?></a> 
              
                     <?php } ?>
              
@@ -253,12 +253,13 @@
                                     <label for="drop-3" class="toggle">Works </label>
                                     <a><?php echo $cat['cat_name'];?></a>
                                     <input type="checkbox" id="drop-3" />
-                                    <ul>
+                                <ul>
             <?php $subcatname = $this->db->get_where('subcategory',array('cat_id' =>  $cat['cat_id']))->result_array(); ?>
+            
                 <?php foreach($subcatname as $subcat){ ?>
-                                        <li><a href=""><?php echo $subcat['subcat_name'];?></a>
-                                        </li>
-                                        <?php } ?>
+                <li><a href="<?php echo base_url().'Home/subcat/'.$cat['cat_id'];?>"><?php echo $subcat['subcat_name'];?></a>
+                                </li>
+                            <?php } ?>
                                     </ul>
 
                                 </li>

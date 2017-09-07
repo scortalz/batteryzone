@@ -1,5 +1,9 @@
 <?php include_once('layout/header.php');?>
-
+<?php 
+      $subcaturl   = 'assets/images/uploads/category/subcategory/';
+      $prourl      = 'assets/images/uploads/category/subcategory/products/';
+      $banurl      = 'assets/images/uploads/banners/';
+ ?>
 <div class="col-12 col-md-9 bodyContent">
     <p class="float-left d-md-none">
         <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">&DoubleLongLeftArrow; Toggle Categories</button>
@@ -25,27 +29,19 @@
         <div class="col-md-2"></div>
         <div class="col-md-8">
             <div class="row">
-                <div class="col-md-5">
-                    <img class="img-responsive" src="<?php echo base_url();?>assets/images/batyy.png">
-                    <div class="subCatName">
-                        <a href=""> Product 1 Name</a>
-                    </div>
 
-                    <div class="subCatDesc">
-                        Product 1 Description here, Product 1 Description here, Product 1 Description here,
+
+            <?php foreach($selsubcategory as $subcat) {?>
+                <div class="col-md-5">
+                    <img class="img-responsive" src="<?php echo base_url().$subcaturl.$subcat['subcat_img'];?>">
+                    <div class="subCatName">
+                        <a href=""> <?php echo $subcat['subcat_name']; ?></a>
                     </div>
                 </div>
                 <div class="col-md-2"></div>
-                <div class="col-md-5">
-                    <img class="img-responsive" src="<?php echo base_url();?>assets/images/batyy.png">
-                    <div class="subCatName">
-                        <a href=""> Product 2 Name</a>
-                    </div>
+            <?php } ?>
 
-                    <div class="subCatDesc">
-                        Product 1 Description here, Product 1 Description here, Product 1 Description here,
-                    </div>
-                </div>
+
 
             </div>
         </div>

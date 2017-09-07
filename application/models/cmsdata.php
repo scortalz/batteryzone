@@ -37,6 +37,15 @@ Class cmsdata extends CI_Model
             $data=$this->db->get();
             return $data->result_array();
         }
+
+        function getselsubcat($categoryid){
+            $this->db->select('*');
+            $this->db->from('subcategory');
+            $this->db->where('cat_id',$categoryid);
+            $data=$this->db->get();
+            return $data->result_array();
+        }
+
     function addbanner($bannerimage){
           $data = array('b_img' => $bannerimage,
                       'b_date' => date('Y-m-d'));
@@ -134,7 +143,7 @@ Class cmsdata extends CI_Model
       function delsubCatRow($delsub){
 
             $this->db->where('subcat_id', $delsub);
-            $this->db->delete('subcategory');  
+            $this->db->delete(array('subcategory','products'));  
             return TRUE;
        }
 

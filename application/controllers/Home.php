@@ -24,15 +24,19 @@ class Home extends CI_Controller {
 		$this->data['subcategory']	= $this->cmsdata->subcatdetail();
 		$this->data['products'] 	= $this->cmsdata->getallproducts();
 
-		$this->data['pagename'] = 'main';
+		$this->data['pagename'] 	= 'main';
 		$this->load->view('main',$this->data); //  View main main
 	}
 
 
-	public function subcat()
+	public function subcat($categoryid = '')
 	{
-		$this->data['pagename'] = 'subcat';
-		$this->load->view('subcat'); //  View subcat page
+
+		$this->load->model('cmsdata');
+		$this->data['category']			= $this->cmsdata->getallcategory();
+		$this->data['selsubcategory'] 	= $this->cmsdata->getselsubcat($categoryid);
+		$this->data['pagename']			= 'subcat';
+		$this->load->view('subcat',$this->data); //  View subcat page
 
 	}
 /*
@@ -65,6 +69,7 @@ class Home extends CI_Controller {
 
 
 		$this->data['pagename'] = 'products';
+		$this->data['category']	= $this->cmsdata->getallcategory();
 		$this->load->view('products',$this->data); //  View Product page
 	}
 
