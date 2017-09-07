@@ -150,8 +150,8 @@
                         <p>Products</p>
                     </a>
                     <ul>
-                        <li <?php if($pagename == "productsdescription.php") { echo "class='active'"; } ?>>
-                        <a href="<?php echo base_url();?>Cms/productsdescription">Products Descriptions</a></li>
+ <!--                        <li <?php if($pagename == "productsdescription.php") { echo "class='active'"; } ?>>
+                        <a href="<?php echo base_url();?>Cms/productsdescription">Products Descriptions</a></li> -->
                          <!-- <li><a href="">Products Images</a></li> -->
                     </ul>
                 </li>

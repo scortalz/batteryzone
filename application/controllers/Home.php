@@ -17,23 +17,31 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
-		$this->data['pagename'] = 'main';	 
+
+		$this->load->model('cmsdata');
+		
+		$this->data['category']		= $this->cmsdata->getallcategory();
+		$this->data['subcategory']	= $this->cmsdata->subcatdetail();
+		$this->data['products'] 	= $this->cmsdata->getallproducts();
+
+		$this->data['pagename'] = 'main';
 		$this->load->view('main',$this->data); //  View main main
 	}
 
 
 	public function subcat()
 	{
-
+		$this->data['pagename'] = 'subcat';
 		$this->load->view('subcat'); //  View subcat page
 
 	}
-
+/*
 	public function subcatpro()
 	{
+		$this->data['pagename'] = 'subcat';
 		$this->load->view('subcatpro'); //  View subcat product page
 	}
-
+*/
 
 	public function products($form = '')
 	{

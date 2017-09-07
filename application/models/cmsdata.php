@@ -123,10 +123,10 @@ Class cmsdata extends CI_Model
 
       }
 
-      function delCatRow($del){
+        function delCatRow($del){
 
             $this->db->where('cat_id', $del);
-            $this->db->delete('category'); 	
+            $this->db->delete(array('category','subcategory','products')); 	
             return TRUE;
        }
 

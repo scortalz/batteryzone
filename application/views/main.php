@@ -1,4 +1,10 @@
 <?php include_once('layout/header.php');?>
+
+<?php $caturl      = 'assets/images/uploads/category/';
+      $subcaturl   = 'assets/images/uploads/category/subcategory/';
+      $prourl      = 'assets/images/uploads/category/subcategory/products/';
+      $banurl      = 'assets/images/uploads/banners/';
+ ?>
 <div class="col-12 col-md-9 bodyContent">
     <p class="float-left d-md-none">
         <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">&DoubleLongLeftArrow; Toggle Categories</button>
@@ -11,6 +17,72 @@
     </div>
 
     <div class="row">
+    <?php foreach($category as $cat){ ?>
+        <div id="image-changer" class="col-6 col-lg-4">
+            <img style="height: 200px;" src="<?php echo base_url().$caturl.$cat['cat_img']; ?>">
+            <h2><?php echo $cat['cat_name']; ?></h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
+            </p>
+        </div>
+        <?php } ?>
+<?php /*      <!--/span-->
+        <div id="image-changer" class="col-6 col-lg-4">
+            <img style="height: 200px;" src="<?php echo base_url();?>assets/images/batryside1.png">
+            <h2>Heading</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
+            </p>
+        </div>
+        <!--/span-->
+        <div id="image-changer" class="col-6 col-lg-4">
+            <img style="height: 200px;" src="<?php echo base_url();?>assets/images/batryside1.png">
+            <h2>Heading</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
+            </p>
+        </div>
+        <!--/span-->
+        <div id="image-changer" class="col-6 col-lg-4">
+            <img style="height: 200px;" src="<?php echo base_url();?>assets/images/batryside1.png">
+            <h2>Heading</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
+            </p>
+        </div>
+        <!--/span-->
+        <div id="image-changer" class="col-6 col-lg-4">
+            <img style="height: 200px;" src="<?php echo base_url();?>assets/images/batryside1.png">
+            <h2>Heading</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
+            </p>
+        </div>
+        <!--/span-->
+        <div id="image-changer" class="col-6 col-lg-4">
+            <img style="height: 200px;" src="<?php echo base_url();?>assets/images/batryside1.png">
+            <h2>Heading</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
+            </p>
+        </div>
+        <!--/span-->
+        <div id="image-changer" class="col-6 col-lg-4">
+            <img style="height: 200px;" src="<?php echo base_url();?>assets/images/batryside1.png">
+            <h2>Heading</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
+            </p>
+        </div>
+        <!--/span-->
+        <div id="image-changer" class="col-6 col-lg-4">
+            <img style="height: 200px;" src="<?php echo base_url();?>assets/images/batryside1.png">
+            <h2>Heading</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
+            </p>
+        </div>
+        <!--/span-->
 
         <div id="image-changer" class="col-6 col-lg-4">
             <img style="height: 200px;" src="<?php echo base_url();?>assets/images/batryside1.png">
@@ -19,71 +91,7 @@
             <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
             </p>
         </div>
-        <!--/span-->
-        <div id="image-changer" class="col-6 col-lg-4">
-            <img style="height: 200px;" src="<?php echo base_url();?>assets/images/batryside1.png">
-            <h2>Heading</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
-            </p>
-        </div>
-        <!--/span-->
-        <div id="image-changer" class="col-6 col-lg-4">
-            <img style="height: 200px;" src="<?php echo base_url();?>assets/images/batryside1.png">
-            <h2>Heading</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
-            </p>
-        </div>
-        <!--/span-->
-        <div id="image-changer" class="col-6 col-lg-4">
-            <img style="height: 200px;" src="<?php echo base_url();?>assets/images/batryside1.png">
-            <h2>Heading</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
-            </p>
-        </div>
-        <!--/span-->
-        <div id="image-changer" class="col-6 col-lg-4">
-            <img style="height: 200px;" src="<?php echo base_url();?>assets/images/batryside1.png">
-            <h2>Heading</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
-            </p>
-        </div>
-        <!--/span-->
-        <div id="image-changer" class="col-6 col-lg-4">
-            <img style="height: 200px;" src="<?php echo base_url();?>assets/images/batryside1.png">
-            <h2>Heading</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
-            </p>
-        </div>
-        <!--/span-->
-        <div id="image-changer" class="col-6 col-lg-4">
-            <img style="height: 200px;" src="<?php echo base_url();?>assets/images/batryside1.png">
-            <h2>Heading</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
-            </p>
-        </div>
-        <!--/span-->
-        <div id="image-changer" class="col-6 col-lg-4">
-            <img style="height: 200px;" src="<?php echo base_url();?>assets/images/batryside1.png">
-            <h2>Heading</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
-            </p>
-        </div>
-        <!--/span-->
-
-        <div id="image-changer" class="col-6 col-lg-4">
-            <img style="height: 200px;" src="<?php echo base_url();?>assets/images/batryside1.png">
-            <h2>Heading</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
-            </p>
-        </div>
+        */?>  
         <!--/span-->
     </div>
     <!--/row-->

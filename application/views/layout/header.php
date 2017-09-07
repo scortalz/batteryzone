@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
@@ -71,42 +70,14 @@
                     </div>
                     <div class="col-lg-9 col-md-9 ">
                         <span class="headerrr">
-               <a class="btn btn-secondary" href="#" role="button">Cat lituim battery 1</a> 
-             
+                        <?php foreach ($category as $cat){ ?>
+    
 
-              <span class="headerrr">
-               <a class="btn btn-secondary" href="#" role="button">Cat Cat lituim battery 2</a> 
+               <a class="btn btn-secondary" href="#" role="button"><?php echo $cat['cat_name']; ?></a> 
              
-
-              <span class="headerrr">
-               <a class="btn btn-secondary" href="#" role="button">Cat lituim battery Cat 3</a> 
+                    <?php } ?>
              
-
-              <span class="headerrr">
-               <a class="btn btn-secondary" href="#" role="button">Cat lituim battery 4</a> 
-             
-
-              <span class="headerrr">
-               <a class="btn btn-secondary" href="#" role="button">Cat Cat lituim battery 5</a> 
-             
-
-              <span class="headerrr">
-               <a class="btn btn-secondary" href="#" role="button">Cat Cat lituim battery 6</a> 
-             
-
-              <span class="headerrr">
-               <a class="btn btn-secondary" href="#" role="button">Cat Cat lituim battery 7</a> 
-             
-
-              <span class="headerrr">
-               <a class="btn btn-secondary" href="#" role="button">Cat Cat lituim battery 8</a> 
-             
-
-              <span class="headerrr">
-               <a class="btn btn-secondary" href="#" role="button">Cat Cat lituim battery9</a> 
-             </span>
                     </div>
-
 
                 </div>
 
@@ -275,157 +246,25 @@
                             <input type="checkbox" id="drop-2" />
                             <ul id="pp">
 
+                                    <?php foreach($category as $key => $cat) { ?>
                                 <li>
 
                                     <!-- Second Tier Drop Down -->
                                     <label for="drop-3" class="toggle">Works </label>
-                                    <a>Cat3</a>
+                                    <a><?php echo $cat['cat_name'];?></a>
                                     <input type="checkbox" id="drop-3" />
                                     <ul>
-                                        <li><a href="">HTML/CSS</a>
+            <?php $subcatname = $this->db->get_where('subcategory',array('cat_id' =>  $cat['cat_id']))->result_array(); ?>
+                <?php foreach($subcatname as $subcat){ ?>
+                                        <li><a href=""><?php echo $subcat['subcat_name'];?></a>
                                         </li>
-                                        <li><a href="">jQuery</a>
-                                        </li>
-                                        <li><a href="">Python</a>
-                                        </li>
+                                        <?php } ?>
                                     </ul>
 
                                 </li>
 
-                                <li>
+                                <?php } ?>
 
-                                    <!-- Second Tier Drop Down -->
-                                    <label for="drop-4" class="toggle">Works </label>
-                                    <a>Cat 4</a>
-                                    <input type="checkbox" id="drop-4" />
-                                    <ul>
-                                        <li><a href="">HTML/CSS</a>
-                                        </li>
-                                        <li><a href="">jQuery</a>
-                                        </li>
-                                        <li><a href="">Python</a>
-                                        </li>
-                                    </ul>
-
-                                </li>
-
-                                <li>
-
-                                    <!-- Second Tier Drop Down -->
-                                    <label for="drop-4" class="toggle">Works </label>
-                                    <a>Cat 4</a>
-                                    <input type="checkbox" id="drop-4" />
-                                    <ul>
-                                        <li><a href="">HTML/CSS</a>
-                                        </li>
-                                        <li><a href="">jQuery</a>
-                                        </li>
-                                        <li><a href="">Python</a>
-                                        </li>
-                                    </ul>
-
-                                </li>
-
-                                <li>
-
-                                    <!-- Second Tier Drop Down -->
-                                    <label for="drop-4" class="toggle">Works </label>
-                                    <a>Cat 4</a>
-                                    <input type="checkbox" id="drop-4" />
-                                    <ul>
-                                        <li><a href="">HTML/CSS</a>
-                                        </li>
-                                        <li><a href="">jQuery</a>
-                                        </li>
-                                        <li><a href="">Python</a>
-                                        </li>
-                                    </ul>
-
-                                </li>
-
-                                <li>
-
-                                    <!-- Second Tier Drop Down -->
-                                    <label for="drop-4" class="toggle">Works </label>
-                                    <a>Cat 4</a>
-                                    <input type="checkbox" id="drop-4" />
-                                    <ul>
-                                        <li><a href="">HTML/CSS</a>
-                                        </li>
-                                        <li><a href="">jQuery</a>
-                                        </li>
-                                        <li><a href="">Python</a>
-                                        </li>
-                                    </ul>
-
-                                </li>
-
-                                <li>
-
-                                    <!-- Second Tier Drop Down -->
-                                    <label for="drop-4" class="toggle">Works </label>
-                                    <a>Cat 4</a>
-                                    <input type="checkbox" id="drop-4" />
-                                    <ul>
-                                        <li><a href="">HTML/CSS</a>
-                                        </li>
-                                        <li><a href="">jQuery</a>
-                                        </li>
-                                        <li><a href="">Python</a>
-                                        </li>
-                                    </ul>
-
-                                </li>
-                                <li>
-
-                                    <!-- Second Tier Drop Down -->
-                                    <label for="drop-4" class="toggle">Works </label>
-                                    <a>Cat 4</a>
-                                    <input type="checkbox" id="drop-4" />
-                                    <ul>
-                                        <li><a href="">HTML/CSS</a>
-                                        </li>
-                                        <li><a href="">jQuery</a>
-                                        </li>
-                                        <li><a href="">Python</a>
-                                        </li>
-                                    </ul>
-
-                                </li>
-
-                                <li>
-
-                                    <!-- Second Tier Drop Down -->
-                                    <label for="drop-4" class="toggle">Works </label>
-                                    <a>Cat 4</a>
-                                    <input type="checkbox" id="drop-4" />
-                                    <ul>
-                                        <li><a href="">HTML/CSS</a>
-                                        </li>
-                                        <li><a href="">jQuery</a>
-                                        </li>
-                                        <li><a href="">Python</a>
-                                        </li>
-                                    </ul>
-
-                                </li>
-
-                                <li>
-
-                                    <!-- Second Tier Drop Down -->
-                                    <label for="drop-4" class="toggle">Works </label>
-                                    <a>Cat 4</a>
-                                    <input type="checkbox" id="drop-4" />
-                                    <ul>
-                                        <li><a href="">HTML/CSS</a>
-                                        </li>
-                                        <li><a href="">jQuery</a>
-                                        </li>
-                                        <li><a href="">Python</a>
-                                        </li>
-                                    </ul>
-
-                                </li>
                             </ul>
                         </li>
 
