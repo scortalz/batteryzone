@@ -7,6 +7,7 @@
         <th>Product Image</th>
 
         <th>Date</th>
+        <th>check</th>
         <th>Action </th>
       </tr>
     </thead>
@@ -19,6 +20,7 @@
         <td>2</td>
         <td>3</td>
         <td>4</td>
+        <td>5</td>
         <td>  
         <a class="btn btn-info btn-xs" type="button" id="" name=""  data-toggle="modal" value="" data-target="#">Edit</a>
         <a href="" 
