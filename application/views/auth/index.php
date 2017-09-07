@@ -102,6 +102,7 @@
   <div class="bar"> </div>
 </div>
 </div>
+<a href="mailto:joe@example.com?subject=feedback" "email me">email me</a>
 <div class="wrapper">
     <div class="sidebar" data-color="purple" data-image="<?php echo base_url();?>assets/img/sidebar-5.jpg">
 
