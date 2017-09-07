@@ -33,7 +33,7 @@ class Cms extends CI_Controller {
 
 		else
 		{
-			// set the flash data error message if there is one + + okay this is just a testing in multiple files
+			// set the flash data error message if there is one
 
 
 			$this->data['category']	= $this->cmsdata->getallcategory();
