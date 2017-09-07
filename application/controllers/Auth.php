@@ -14,7 +14,7 @@ class Auth extends CI_Controller {
 		$this->lang->load('auth');
 	}
 
-	// redirect if needed, otherwise display the user list
+	// redirect if needed, otherwise display the user list -- okay this is just a testing in multiple files
 	public function index()
 	{
 
