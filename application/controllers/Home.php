@@ -67,10 +67,30 @@ class Home extends CI_Controller {
 			$this->home_model->insertorder($data);
 		}
 
-
+		
+		$this->load->model('cmsdata');
 		$this->data['pagename'] = 'products';
 		$this->data['category']	= $this->cmsdata->getallcategory();
 		$this->load->view('products',$this->data); //  View Product page
+	}
+
+	function allproducts($subcatid = ''){
+		
+		if (is_numeric($subcatid)) {
+			
+			$this->data['selectedpro']	= $this->home_model->getallselectedpro($subcatid);
+		
+		}
+		else {
+
+			$this->data['selectedpro']	= $this->home_model->getallpro();
+		
+		}
+
+		$this->load->model('cmsdata');
+		$this->data['pagename'] = 'products';
+		$this->data['category']	= $this->cmsdata->getallcategory();
+		$this->load->view('allproducts',$this->data); //  View Product page
 	}
 
 	public function askaquestion(){

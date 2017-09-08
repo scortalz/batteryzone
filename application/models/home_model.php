@@ -11,5 +11,23 @@ Class home_model extends CI_Model
         $this->db->insert('question', $data);
         return TRUE;
       }
+
+      function getallselectedpro($subcatid){
+
+        $this->db->select('*');
+        $this->db->from('products');
+        $this->db->where('subcat_id',$subcatid);
+        $data=$this->db->get();
+        return $data->result_array();
+
+      }
+
+      function getallpro(){
+	 
+	    $this->db->select('*');
+        $this->db->from('products');
+        $data=$this->db->get();
+        return $data->result_array();
+      }
 }
 ?>
