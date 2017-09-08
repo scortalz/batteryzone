@@ -29,5 +29,15 @@ Class home_model extends CI_Model
         $data=$this->db->get();
         return $data->result_array();
       }
+      
+	  function getproduct($form){
+
+	  	$this->db->select('*');
+        $this->db->from('products');
+        $this->db->where('p_id',$form);
+        $data=$this->db->get();
+        return $data->result_array();
+	  }
 }
+
 ?>

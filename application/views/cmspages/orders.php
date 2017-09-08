@@ -18,7 +18,7 @@
       <tr>
     <?php $count = 1; foreach ($orders as $value) { ?>
         <td><?php echo $count++; ?></td>
-        <td><?php echo $value['p_id']; ?></td>
+        <td><?php $proname = $this->db->get_where('products',array('p_id' =>  $value['p_id']))->result_array(); echo $proname['0']['p_name'];  ?></td>
         <td><?php echo $value['o_name']; ?></td>
         <td><?php echo $value['o_email']; ?></td>
 

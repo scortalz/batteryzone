@@ -143,6 +143,7 @@ body {
   <div class="bottom">
     <div class="heading"><?php echo $products['p_name']; ?></div>
     <div class="price"><?php echo $products['p_price']; ?></div>
+    <a href="<?php echo base_url().'Home/products/'.$products['p_id']; ?>" class="btn btn-primary">Buy Now</a>
   </div>
   
 </div>

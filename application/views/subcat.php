@@ -35,7 +35,7 @@
                 <div class="col-md-5">
                     <img class="img-responsive" src="<?php echo base_url().$subcaturl.$subcat['subcat_img'];?>">
                     <div class="subCatName">
-                        <a href="<?php echo base_url();?>Home/products/<?php echo $subcat['subcat_id'];?>"> <?php echo $subcat['subcat_name']; ?></a>
+                        <a href="<?php echo base_url();?>Home/allproducts/<?php echo $subcat['subcat_id'];?>"> <?php echo $subcat['subcat_name']; ?></a>
                     </div>
                 </div>
                 <div class="col-md-2"></div>

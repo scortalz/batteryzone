@@ -54,7 +54,7 @@ class Home extends CI_Controller {
 		if ($form == 'add-order') {
 
 			$data = array(
-			'p_id' 		=> 1,
+			'p_id' 		=> $this->input->post('p_id'),
 			'o_name' 	=> $this->input->post('name'),
 			'o_email' 	=> $this->input->post('email'),
 			'o_qty' 	=> $this->input->post('quantity'),
@@ -67,11 +67,28 @@ class Home extends CI_Controller {
 			$this->home_model->insertorder($data);
 		}
 
-		
+
 		$this->load->model('cmsdata');
 		$this->data['pagename'] = 'products';
+
+		if (is_numeric($form)) {
+
+		$this->data['aproduct']	= $this->home_model->getproduct($form);
+
+		}
+
+		if (!empty($this->data['aproduct'])) {
+					
 		$this->data['category']	= $this->cmsdata->getallcategory();
 		$this->load->view('products',$this->data); //  View Product page
+		
+			}		
+
+		else {
+
+			redirect('Home/subcat','refresh');
+		
+		}
 	}
 
 	function allproducts($subcatid = ''){
