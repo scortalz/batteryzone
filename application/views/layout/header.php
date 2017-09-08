@@ -69,7 +69,7 @@
 
                     <div class="col-lg-2 col-md-2">
 
-                        <img src="<?php echo base_url();?>assets/images/logo1.jpg" class="stickyLogo">
+                       <a href="<?php echo base_url();?>"> <img src="<?php echo base_url();?>assets/images/logo1.jpg" class="stickyLogo"></a>
 
                     </div>
                     <div class="col-lg-9 col-md-9 ">
@@ -100,7 +100,7 @@
                     <div class="row">
                         <div class="col-md-4 col-sm-4 col-xs-12">
 
-                            <img src="<?php echo base_url();?>assets/images/logo1.jpg" class="logo">
+                            <a href="<?php echo base_url();?>"> <img src="<?php echo base_url();?>assets/images/logo1.jpg" class="logo"></a>
 
                         </div>
 
