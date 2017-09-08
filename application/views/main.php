@@ -21,8 +21,14 @@
         <div id="image-changer" class="col-6 col-lg-4">
             <img style="height: 200px;" src="<?php echo base_url().$caturl.$cat['cat_img']; ?>">
             <h2><?php echo $cat['cat_name']; ?></h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-secondary" href="<?php echo base_url().'Home/subcat/'.$cat['cat_id']; ?>" role="button">View details &raquo;</a>
+            <p><!-- Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. --> 
+             <?php $subcatname = $this->db->get_where('subcategory',array('cat_id' =>  $cat['cat_id']))->result_array(); ?>
+            
+                <?php foreach($subcatname as $subcat){ ?>   
+                <a class="btn btn-secondary" href="<?php echo base_url().'Home/subcat/'.$cat['cat_id']; ?>" role="button"><?php echo $subcat['subcat_name'];?> &raquo;</a>
+                 <?php } ?>
+                </p>
+            <p>
             </p>
         </div>
         <?php } ?>
