@@ -31,7 +31,8 @@
     <link href='<?php echo base_url();?>assets/css/family-Roboto.css' rel='stylesheet' type='text/css'>
     <link href="<?php echo base_url();?>assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>assets/css/jquery.dataTables.min.css" rel="stylesheet"> 
-     
+     <script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
+
      <script type="text/javascript" src="<?php echo base_url();?>assets/js/jquery.dataTables.min.js"></script>  
 <script type="text/javascript" src="<?php echo base_url();?>assets/js/jquery.validate.min.js"></script>  
 <!-- <style type="text/css" media="screen">
@@ -304,7 +305,6 @@ include_once $url."/../layout/cmsmodal.php"; ?>
 
 </body>
 
-<script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
 
     <!--   Core JS Files   -->
     <!-- <script src="<?php echo base_url();?>assets/js/jquery-3.2.1.slim.min.js" type="text/javascript"></script> -->

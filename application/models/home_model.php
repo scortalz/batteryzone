@@ -1,5 +1,5 @@
  <?php
-Class home_model extends CI_Model
+Class Home_model extends CI_Model
 {
 
 		function insertorder($data){

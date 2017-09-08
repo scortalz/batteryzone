@@ -32,10 +32,10 @@ class Auth extends CI_Controller {
 		{
 			// set the flash data error message if there is one
 			$this->data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
+			redirect('Cms/category');
+			/*$this->data['pagename']	= "dashboard.php";
 
-			$this->data['pagename']	= "dashboard.php";
-
-			$this->load->view('auth/index', $this->data);
+			$this->load->view('auth/index', $this->data);*/
 		}
 	}
 

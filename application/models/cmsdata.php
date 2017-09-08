@@ -1,5 +1,5 @@
  <?php
-Class cmsdata extends CI_Model
+Class Cmsdata extends CI_Model
 {
       function getallcategory()
            { 
