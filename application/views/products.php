@@ -1,5 +1,9 @@
 <?php include_once('layout/header.php');?>
-
+<?php 
+      $subcaturl   = 'assets/images/uploads/category/subcategory/';
+      $prourl      = 'assets/images/uploads/category/subcategory/products/';
+      $banurl      = 'assets/images/uploads/banners/';
+ ?>
     
       <div class="col-12 col-md-9 bodyContent">
     <p class="float-left d-md-none">
@@ -15,6 +19,8 @@
 
 </div>
 </div>
+<?php foreach ($aproduct as $product) { ?>
+
 
 
 <div class="container">
@@ -23,7 +29,7 @@
         <!-- Main Row -->
         <div class="col-md-4 ProName ">
             <!-- Picture Plugin Start -->
-            <img id="batteryimage" class="img-responsive" style="cursor: pointer" data-toggle="modal" data-target="#myModal2" src="<?php echo base_url();?>assets/images/batryside1.png">
+            <img id="batteryimage" class="img-responsive" style="cursor: pointer" data-toggle="modal" data-target="#myModal2" src="<?php echo base_url().$prourl.$product['p_main_image'];?>">
 
             <div class="modal fade" id="myModal2" role="dialog">
                 <div class="modal-dialog modal-md">
@@ -34,7 +40,7 @@
                         </div>
                         <div class="modal-body">
 
-                            <center><img src="<?php echo base_url();?>assets/images/batryside1.png">
+                            <center><img src="<?php echo base_url().$prourl.$product['p_main_image'];?>">
                             </center>
 
                         </div>
@@ -52,11 +58,11 @@
 
         <div class="col-md-3">
             <span class="ProName">
-          Product Batery XYZ for Product Name XYZ
+          <?php echo $product['p_name'];?>
         </span>
             <br>
 
-            <span class="proPrice"> Rs. 100 
+            <span class="proPrice"><?php echo $product['p_price'];?> 
         </span>
             <br>
 
@@ -101,7 +107,7 @@
                             <div class="col-md-6 mb-15">
                                 <textarea name="question" style="width: 323px;" class="form-control" id="question" placeholder="Your Question"></textarea>
                             </div>
-                            <input type="hidden" name="p_id" id="p_id" value="1">
+                            <input type="hidden" name="p_id" id="p_id" value="<?php echo $product['p_id'];?>">
                             <input type="hidden" name="pagename" id="pagename" value="<?php echo $pagename;?>" >
                      </fieldset>
                         </div>
@@ -224,7 +230,7 @@
                         </div>
                     </div>
                     <center>
-                        <img src="<?php echo base_url();?>assets/images/batyy.png" class="imggformm">
+                        <img src="<?php echo base_url().$prourl.$product['p_main_image'];?>" class="imggformm">
                     </center>
                 </fieldset>
             </form>
@@ -237,7 +243,7 @@
     <!-- End Main Row -->
 </div>
 <!-- End Main Container -->
-
+<?php } ?>
 
 
 

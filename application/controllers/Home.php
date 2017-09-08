@@ -67,11 +67,28 @@ class Home extends CI_Controller {
 			$this->home_model->insertorder($data);
 		}
 
-		
+
 		$this->load->model('cmsdata');
 		$this->data['pagename'] = 'products';
+
+		if (is_numeric($form)) {
+
+		$this->data['aproduct']	= $this->home_model->getproduct($form);
+
+		}
+
+		if (!empty($this->data['aproduct'])) {
+					
 		$this->data['category']	= $this->cmsdata->getallcategory();
 		$this->load->view('products',$this->data); //  View Product page
+		
+			}		
+
+		else {
+
+			redirect('Home/subcat','refresh');
+		
+		}
 	}
 
 	function allproducts($subcatid = ''){
