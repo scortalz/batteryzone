@@ -3,9 +3,9 @@
    
    
     .slider {
-        width: 40%;
-        height: 40%;
-        margin: 5% 0 0 30%; 
+        width:  75%;
+        height: 20%;
+        margin: 3% 0 7% -4%; 
     }
 
     .slick-slide {
@@ -18,7 +18,8 @@
 
     .slick-prev:before,
     .slick-next:before {
-        color: grey;
+
+        color: white;
     }
   </style>
 
@@ -36,24 +37,29 @@
     <div class="row aa">
         <div class="col-md-12">
             <!-- <img class="img-responsive" src="<?php echo base_url();?>assets/images/bannerb.png"> -->
-    <section class="autoplay slider">
+    <section class="autoplay slider " style="margin: 0px auto;" >
              <div>
-               <img class="img-responsive" src="http://placehold.it/210x70?text=1">
+               <img style="width: 100%; height: 40vh;" src="<?php echo base_url();?>assets/images/slider/1.png">
              </div>
+
              <div>
-               <img class="img-responsive" src="http://placehold.it/210x70?text=2">
+               <img style="width: 100%; height: 40vh;" src="<?php echo base_url();?>assets/images/slider/2.png">
              </div>
+
              <div>
-               <img class="img-responsive" src="http://placehold.it/210x70?text=3">
+               <img style="width: 100%; height: 40vh;" src="<?php echo base_url();?>assets/images/slider/3.png">
              </div>
+
              <div>
-               <img class="img-responsive" src="http://placehold.it/210x70?text=4">
+               <img style="width: 100%; height: 40vh;" src="<?php echo base_url();?>assets/images/slider/4.png">
              </div>
+
              <div>
-               <img class="img-responsive" src="http://placehold.it/210x70?text=5">
+               <img style="width: 100%; height: 40vh;" src="<?php echo base_url();?>assets/images/slider/5.png">
              </div>
+
              <div>
-               <img class="img-responsive" src="http://placehold.it/210x70?text=6">
+               <img style="width: 100%; height: 45vh;" src="<?php echo base_url();?>assets/images/slider/6.png">
              </div>
   </section>
     </div>
