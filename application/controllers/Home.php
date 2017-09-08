@@ -54,7 +54,7 @@ class Home extends CI_Controller {
 		if ($form == 'add-order') {
 
 			$data = array(
-			'p_id' 		=> 1,
+			'p_id' 		=> $this->input->post('p_id'),
 			'o_name' 	=> $this->input->post('name'),
 			'o_email' 	=> $this->input->post('email'),
 			'o_qty' 	=> $this->input->post('quantity'),

@@ -31,7 +31,7 @@
     <link href='<?php echo base_url();?>assets/css/family-Roboto.css' rel='stylesheet' type='text/css'>
     <link href="<?php echo base_url();?>assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>assets/css/jquery.dataTables.min.css" rel="stylesheet"> 
-     <script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
+     
      <script type="text/javascript" src="<?php echo base_url();?>assets/js/jquery.dataTables.min.js"></script>  
 <script type="text/javascript" src="<?php echo base_url();?>assets/js/jquery.validate.min.js"></script>  
 <!-- <style type="text/css" media="screen">
@@ -304,16 +304,17 @@ include_once $url."/../layout/cmsmodal.php"; ?>
 
 </body>
 
+<script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
 
     <!--   Core JS Files   -->
     <!-- <script src="<?php echo base_url();?>assets/js/jquery-3.2.1.slim.min.js" type="text/javascript"></script> -->
-	<script src="<?php echo base_url();?>assets/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="<?php echo base_url();?>assets/js/bootstrap.min.js" type="text/javascript"></script>
 
-	<!--  Checkbox, Radio & Switch Plugins -->
-	<script src="<?php echo base_url();?>assets/js/bootstrap-checkbox-radio-switch.js"></script>
+    <!--  Checkbox, Radio & Switch Plugins -->
+    <script src="<?php echo base_url();?>assets/js/bootstrap-checkbox-radio-switch.js"></script>
 
-	<!--  Charts Plugin -->
-	<script src="<?php echo base_url();?>assets/js/chartist.min.js"></script>
+    <!--  Charts Plugin -->
+    <script src="<?php echo base_url();?>assets/js/chartist.min.js"></script>
 
     <!--  Notifications Plugin    -->
     <script src="<?php echo base_url();?>assets/js/bootstrap-notify.js"></script>
@@ -322,11 +323,10 @@ include_once $url."/../layout/cmsmodal.php"; ?>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>-->
 
     <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
-	<script src="<?php echo base_url();?>assets/js/light-bootstrap-dashboard.js"></script>
+    <script src="<?php echo base_url();?>assets/js/light-bootstrap-dashboard.js"></script>
 
-	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
-	<script src="<?php echo base_url();?>assets/js/demo.js"></script>
-
+    <!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
+    <script src="<?php echo base_url();?>assets/js/demo.js"></script>
 
 	<script type="text/javascript">
 

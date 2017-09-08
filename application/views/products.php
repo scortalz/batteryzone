@@ -144,7 +144,7 @@
 
                         </div>
                     </div>
-
+                    <input type="hidden" name="p_id" value="<?php echo $product['p_id']?>">
                     <!-- Text input-->
                     <div class="form-group">
 
