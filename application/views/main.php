@@ -67,7 +67,7 @@
     <div class="row">
     <?php foreach($category as $cat){ ?>
         <div id="image-changer" class="col-6 col-lg-4">
-            <img style="height: 200px;" src="<?php echo base_url().$caturl.$cat['cat_img']; ?>">
+            <img class="catMain" src="<?php echo base_url().$caturl.$cat['cat_img']; ?>">
             <h2><?php echo $cat['cat_name']; ?></h2>
             <p><!-- Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. --> 
              <?php $subcatname = $this->db->get_where('subcategory',array('cat_id' =>  $cat['cat_id']))->result_array(); ?>

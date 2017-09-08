@@ -497,6 +497,9 @@ text-decoration: underline overline;
 /* End of FOoter */
 
 
+.catMain 
+{ height: 200px; }
+
 .proHead { 
 
   margin: 2%;
