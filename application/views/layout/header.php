@@ -15,8 +15,12 @@
     <!-- Custom styles for this template -->
     <link href="<?php echo base_url();?>assets/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/fa/css/font-awesome.min.css">
-        <script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url();?>assets/js/jquery.validate.min.js"></script>  
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/slick/slick-theme.css">
+
+
+    <script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js/jquery.validate.min.js"></script>  
 
     <style>
         /* for testing purposes */

@@ -69,8 +69,29 @@
 </footer>
 
     </div><!--/.container-->
+     <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="<?php echo base_url();?>assets/slick/slick.js" type="text/javascript" charset="utf-8"></script>
+
+<script type="text/javascript">
+    
+
+$.noConflict();
+jQuery( document ).ready(function( $ ) {
+ 
+        $(".autoplay").slick({
+        
+        slidesToScroll: 1,
+        autoplay: true,
+        slidesToShow: 1,
+        autoplaySpeed: 2000
+
+      });
+      
+ 
+});
 
 
+</script>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -80,13 +101,18 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="<?php echo base_url();?>assets/js/assets/ie10-viewport-bug-workaround.js"></script>
     <script src="<?php echo base_url();?>assets/js/offcanvas.js"></script>
-
+     
     <script type="text/javascript">
+
+   
+
+ 
 
 
     $(document).ready(function() {
 
-
+     
+ 
         $("#orderform").validate({
             rules: {
                 name: {
@@ -228,7 +254,6 @@ function getCurrentScroll() {
     return window.pageYOffset || document.documentElement.scrollTop;
     }
 });
-
 
 
 

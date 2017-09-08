@@ -16,7 +16,7 @@
 }
 body {
   background: #f9fafa;
-  padding: 20px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -27,12 +27,12 @@ body {
       flex-wrap: wrap;
 }
 .block {
-  margin: 20px;
+ 
   border-radius: 4px;
   width: 280px;
   min-height: 430px;
   background: #fff;
-  padding: 23px;
+ 
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -1,10 +1,34 @@
 <?php include_once('layout/header.php');?>
+  <style type="text/css">
+   
+   
+    .slider {
+        width:  75%;
+        height: 20%;
+        margin: 3% 0 7% -4%; 
+    }
+
+    .slick-slide {
+      margin: 0px 20px;
+    }
+
+    .slick-slide img {
+      width: 100%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+
+        color: white;
+    }
+  </style>
 
 <?php $caturl      = 'assets/images/uploads/category/';
       $subcaturl   = 'assets/images/uploads/category/subcategory/';
       $prourl      = 'assets/images/uploads/category/subcategory/products/';
       $banurl      = 'assets/images/uploads/banners/';
  ?>
+
 <div class="col-12 col-md-9 bodyContent">
     <p class="float-left d-md-none">
         <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">&DoubleLongLeftArrow; Toggle Categories</button>
@@ -12,8 +36,32 @@
 
     <div class="row aa">
         <div class="col-md-12">
-            <img class="img-responsive" src="<?php echo base_url();?>assets/images/bannerb.png">
-        </div>
+            <!-- <img class="img-responsive" src="<?php echo base_url();?>assets/images/bannerb.png"> -->
+    <section class="autoplay slider " style="margin: 0px auto;" >
+             <div>
+               <img style="width: 100%; height: 40vh;" src="<?php echo base_url();?>assets/images/slider/1.png">
+             </div>
+
+             <div>
+               <img style="width: 100%; height: 40vh;" src="<?php echo base_url();?>assets/images/slider/2.png">
+             </div>
+
+             <div>
+               <img style="width: 100%; height: 40vh;" src="<?php echo base_url();?>assets/images/slider/3.png">
+             </div>
+
+             <div>
+               <img style="width: 100%; height: 40vh;" src="<?php echo base_url();?>assets/images/slider/4.png">
+             </div>
+
+             <div>
+               <img style="width: 100%; height: 40vh;" src="<?php echo base_url();?>assets/images/slider/5.png">
+             </div>
+
+             <div>
+               <img style="width: 100%; height: 45vh;" src="<?php echo base_url();?>assets/images/slider/6.png">
+             </div>
+  </section>
     </div>
 
     <div class="row">
@@ -98,4 +146,7 @@
 
 </div>
 
+
+ 
+    
 <?php include_once('layout/footer.php');?>
