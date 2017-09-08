@@ -1,10 +1,33 @@
 <?php include_once('layout/header.php');?>
+  <style type="text/css">
+   
+   
+    .slider {
+        width: 40%;
+        height: 40%;
+        margin: 5% 0 0 30%; 
+    }
+
+    .slick-slide {
+      margin: 0px 20px;
+    }
+
+    .slick-slide img {
+      width: 100%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+        color: grey;
+    }
+  </style>
 
 <?php $caturl      = 'assets/images/uploads/category/';
       $subcaturl   = 'assets/images/uploads/category/subcategory/';
       $prourl      = 'assets/images/uploads/category/subcategory/products/';
       $banurl      = 'assets/images/uploads/banners/';
  ?>
+
 <div class="col-12 col-md-9 bodyContent">
     <p class="float-left d-md-none">
         <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">&DoubleLongLeftArrow; Toggle Categories</button>
@@ -12,8 +35,27 @@
 
     <div class="row aa">
         <div class="col-md-12">
-            <img class="img-responsive" src="<?php echo base_url();?>assets/images/bannerb.png">
-        </div>
+            <!-- <img class="img-responsive" src="<?php echo base_url();?>assets/images/bannerb.png"> -->
+    <section class="autoplay slider">
+             <div>
+               <img class="img-responsive" src="http://placehold.it/210x70?text=1">
+             </div>
+             <div>
+               <img class="img-responsive" src="http://placehold.it/210x70?text=2">
+             </div>
+             <div>
+               <img class="img-responsive" src="http://placehold.it/210x70?text=3">
+             </div>
+             <div>
+               <img class="img-responsive" src="http://placehold.it/210x70?text=4">
+             </div>
+             <div>
+               <img class="img-responsive" src="http://placehold.it/210x70?text=5">
+             </div>
+             <div>
+               <img class="img-responsive" src="http://placehold.it/210x70?text=6">
+             </div>
+  </section>
     </div>
 
     <div class="row">
@@ -92,4 +134,7 @@
 
 </div>
 
+
+ 
+    
 <?php include_once('layout/footer.php');?>
