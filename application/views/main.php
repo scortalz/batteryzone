@@ -27,8 +27,10 @@
       $subcaturl   = 'assets/images/uploads/category/subcategory/';
       $prourl      = 'assets/images/uploads/category/subcategory/products/';
       $banurl      = 'assets/images/uploads/banners/';
- ?>
+ 
 
+ ?>
+ 
 <div class="col-12 col-md-9 bodyContent">
     <p class="float-left d-md-none">
         <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">&DoubleLongLeftArrow; Toggle Categories</button>
@@ -95,11 +97,14 @@
 </div>
 <div class="container">
     <div class="row">
-        <div class="aside col-lg-4  ">
-            <img src="<?php echo base_url();?>assets/images/batryside1.png">
 
-            <img src="<?php echo base_url();?>assets/images/batryside2.png">
+          
+        <div class="aside col-lg-4  ">
+        <?php foreach($banner as $banimg){ ?>  
+            <img src="<?php echo base_url().$banurl.$banimg['b_img'];?>">
+             <?php } ?> 
         </div>
+ 
 
 
 

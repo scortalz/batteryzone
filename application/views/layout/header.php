@@ -69,7 +69,7 @@
 
                     <div class="col-lg-2 col-md-2">
 
-                       <a href="<?php echo base_url();?>"> <img src="<?php echo base_url();?>assets/images/logo1.jpg" class="stickyLogo"></a>
+                       <a href="<?php echo base_url();?>"> <img src="<?php echo base_url();?>assets/images/logo1.png" class="stickyLogo"></a>
 
                     </div>
                     <div class="col-lg-9 col-md-9 ">
@@ -100,35 +100,35 @@
                     <div class="row">
                         <div class="col-md-4 col-sm-4 col-xs-12">
 
-                            <a href="<?php echo base_url();?>"> <img src="<?php echo base_url();?>assets/images/logo1.jpg" class="logo"></a>
+                            <a href="<?php echo base_url();?>"> <img src="<?php echo base_url();?>assets/images/logo1.png" class="logo"></a>
 
                         </div>
 
-                        <div class="col-md-8 col-sm-8 col-xs-12 ">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-3 col-sm-3 col-xs-12">
-                                        <i class="fa fa-car fa-2x" aria-hidden="true"> <span class="icoo"> </span> </i>
-                                    </div>
-                                    <div class="col-md-3 col-sm-3 col-xs-12">
+                        
+                           
+                                        <i class="fa fa-car fa-2x" aria-hidden="true">  </i>
+                                        
+                                        <span class="icoo">Fast <br>Delivery </span> 
+                                      
+                                  
+                                  
                                         <i class="fa fa-money fa-2x" aria-hidden="true">
                   <span class="icoo"> </span>
                 </i>
-                                    </div>
-                                    <div class="col-md-3 col-sm-3 col-xs-12">
+                                    
+                                   
                                         <i class="fa fa-check-square-o fa-2x" aria-hidden="true"> <span class="icoo"> </span></i>
-                                    </div>
+                                   
 
-                                    <div class="col-md-3 col-sm-3 col-xs-12">
+                                    
                                         <i class="fa fa-phone-square fa-2x" aria-hidden="true"></i>
                                         <span class="icoo">  </span>
-                                    </div>
+                                  
 
-                                </div>
-                            </div>
+                                
 
 
-                        </div>
+                       
 
 
 
@@ -224,7 +224,7 @@
 
             </div>
 
-            <br>
+            <br><br><br>
 
     </header>
 

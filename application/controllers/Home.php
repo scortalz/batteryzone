@@ -23,6 +23,7 @@ class Home extends CI_Controller {
 		$this->data['category']		= $this->cmsdata->getallcategory();
 		$this->data['subcategory']	= $this->cmsdata->subcatdetail();
 		$this->data['products'] 	= $this->cmsdata->getallproducts();
+		$this->data['banner'] 		= $this->cmsdata->getallbanner();
 
 		$this->data['pagename'] 	= 'main';
 		$this->load->view('main',$this->data); //  View main main

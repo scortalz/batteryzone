@@ -41,10 +41,21 @@ footer {
 .headerrr
 {
   background: url(../images/green.jpg)  -18px -2px repeat-x;
+  background-size: 80px 132px;
   padding-top: 1%;
   width: 100%;
 
 }
+
+.headerrr .fa { color: rgb(152,0,1); }
+
+.icoo {
+font-size: 14px;
+
+text-transform: uppercase;
+font-weight: bolder;
+ 
+ }
 
  .aa .img-responsive {
     max-width: 100%;
@@ -124,8 +135,8 @@ footer {
 
  .logo 
  {
-width: 108%; 
-height: 90%;
+width: 100%; 
+height: 100%;
 padding-top: 1.5%;
  
  }
@@ -135,10 +146,7 @@ padding-top: 1.5%;
   margin-top: -4%;
  }
 
- .icoo {
-font-size: 10px;
-
- }
+ 
 
  .icooo
  {
