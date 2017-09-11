@@ -105,8 +105,8 @@
                         </div>
 
                         
-                           
-                                        <i class="fa fa-car fa-2x" aria-hidden="true">  </i>
+                                
+                                        <i class="fa fa-car fa-2x fapad" aria-hidden="true">  </i>
                                         
                                         <span class="icoo">Fast <br>Delivery </span> 
                                       
