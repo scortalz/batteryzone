@@ -96,9 +96,9 @@
                 <!-- header er  -->
 
 
-                <div class="col-md-8 col-sm-8 col-xs-12">
+                <div class="col-md-9 col-sm-8 col-xs-12">
                     <div class="row">
-                        <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="col-md-3 col-sm-4 col-xs-12">
 
                             <a href="<?php echo base_url();?>"> <img src="<?php echo base_url();?>assets/images/logo1.png" class="logo"></a>
 
@@ -106,66 +106,45 @@
 
                         
                                 
-                                        <i class="fa fa-car fa-2x fapad" aria-hidden="true">  </i>
+                        <i class=" tip fa fa-car fa-2x fapad " aria-hidden="true" >  </i>
                                         
-                                        <span class="icoo">Fast <br>Delivery </span> 
+                         <span class="tip icoo " >  <b>Fast</b> <br><b class="topFaTxt">Delivery</b>  <span>Delivery FAST Shipping with door step delivery all over Pakistan</span></span>  
                                       
                                   
+
                                   
-                                        <i class="fa fa-money fa-2x" aria-hidden="true">
-                  <span class="icoo"> </span>
-                </i>
+                                        <i class="fa fa-money fa-2x fapad2" aria-hidden="true">
+                  
+                </i>  
+                <span class="tip icoo" >  <b>Pay</b> <br><b class="topFaTxt">Cash</b>  <span>We offer to pay Cash on Delivery for a
+WORRY-FREE shopping experience</span></span>  
                                     
                                    
-                                        <i class="fa fa-check-square-o fa-2x" aria-hidden="true"> <span class="icoo"> </span></i>
-                                   
+               <i class="fa fa-check-square-o fa-2x fapad2" aria-hidden="true"> </i>
+                <span class="tip icoo" >  <b>7 </b> <br><b class="topFaTxt">Days</b>  <span>FREE 7-Day replacement policy on all products from the day of delivery (Applicable in Pakistan only)</span></span>                     
 
                                     
-                                        <i class="fa fa-phone-square fa-2x" aria-hidden="true"></i>
-                                        <span class="icoo">  </span>
+              <i class="fa fa-phone-square fa-2x fapad2" aria-hidden="true"></i>   <span class="tip icoo" >  <b>Call Us</b> <br><b class="topFaTxt">0303-1234567</b>  <span>We offer to pay Cash on Delivery for a
+WORRY-FREE shopping experience</span></span>                                   
                                   
-
-                                
-
-
-                       
-
-
+                      
 
                     </div>
 
-
-
-
+ 
                 </div>
 
-                <div class="col-md-4 col-sm-4 col-xs-12">
-
-
-
+                <div class="col-md-3 col-sm-4 col-xs-12">
+ 
                     <div class="row">
+ 
+                            <i class=" fapadSocial fSocial fa fa-facebook-square fa-2x" aria-hidden="true"></i>
 
+                            <i class=" fapadSocial fa fa-twitter-square fa-2x" aria-hidden="true"></i>
 
-                        <div class="col-md-3 col-sm-3 col-xs-12  text-right">
-                            <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+                            <i class=" fapadSocial fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
 
-                        </div>
-                        <div class="col-md-3 col-sm-3 col-xs-12 text-center">
-                            <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
-
-                        </div>
-                        <div class="col-md-3 col-sm-3 col-xs-12 text-center">
-                            <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
-
-                        </div>
-
-                        <div class="col-md-3 col-sm-3 col-xs-12 text-left">
-                            <i class="fa fa-google-plus-official fa-2x" aria-hidden="true"></i>
-
-                        </div>
-
-
-
+                            <i class=" fapadSocial fa fa-google-plus-official fa-2x" aria-hidden="true"></i>
 
                     </div>
 
@@ -190,7 +169,7 @@
 
                 <div class="col-md-9 col-sm-9 col-xs-12">
                     <div class="row">
-                        <div class="col-md-9 col-xs-12">
+                        <div class="col-md-9 col-xs-12 searchUp">
                             <!-- <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -199,6 +178,13 @@
                             <div id="custom-search-input">
                                 <div class="input-group col-md-12 col-xs-6">
                                     <input type="text" class="form-control input-lg" placeholder="Search" />
+                                    <select>
+                                    <option> Select Categories</option>
+                                     <?php foreach ($category as $cat){ ?>
+                                    <option><?php echo $cat['cat_name']; ?></option>
+                                      
+                                    <?php } ?>
+                                    </select>
                                     <span class="input-group-btn">
                         <button class="btn btn-info btn-lg" type="button">
               <i class="fa fa-search" aria-hidden="true"></i>          </button>
