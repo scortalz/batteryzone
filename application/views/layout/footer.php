@@ -256,7 +256,14 @@ function getCurrentScroll() {
 });
 
 
-
+$(document).ready(function(){
+    /*$("#sidebarHomepp .dropdown-menu main-menu-box").css("display","block");*/
+    var temp = $("#sidebarAllPgspp");
+    if(temp.length !== 0){
+        $(".main-menu-box").css("display","block");
+    }
+    
+});
 </script>
 
   </body>

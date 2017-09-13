@@ -24,6 +24,58 @@
 
     <style>
         /* for testing purposes */
+
+.show-on-hover:hover > ul.dropdown-menu {
+    display: block !important;    
+}
+
+.dropdown-submenu {
+    position: relative !important;
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0 !important;
+    left: 100% !important;
+    margin-top: -6px !important;
+    margin-left: -1px !important;
+    -webkit-border-radius: 0 6px 6px 6px !important;
+    -moz-border-radius: 0 6px 6px !important;
+    border-radius: 0 6px 6px 6px !important;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block !important;
+}
+
+.dropdown-submenu>a:after {
+    display: block !important;
+    content: " " !important;
+    float: right !important;
+    width: 0 !important;
+    height: 0 !important;
+    border-color: transparent !important;
+    border-style: solid !important;
+    border-width: 5px 0 5px 5px !important;
+    border-left-color: #ccc !important;
+    margin-top: 5px !important;
+    margin-right: -10px !important;
+}
+
+.dropdown-submenu:hover>a:after {
+    border-left-color: #fff !important;
+}
+
+.dropdown-submenu.pull-left {
+    float: none !important;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100% !important;
+    margin-left: 10px !important;
+    -webkit-border-radius: 6px 0 6px 6px !important;
+    -moz-border-radius: 6px 0 6px 6px !important;
+    border-radius: 6px 0 6px 6px !important;
+}
     </style>
 </head>
 
@@ -220,34 +272,30 @@ WORRY-FREE shopping experience</span></span>
 
         <div class="row row-offcanvas row-offcanvas-left">
         <?php if(isset($pagename) && $pagename == 'main') { ?>
-            <div class="col-6 col-md-3 sidebar-offcanvas" id="sidebarHome">
+            <div class="col-6 col-md-3 sidebar-offcanvas" id="sidebarHomepp">
             <?php } else { ?>
-             <div class="col-6 col-md-3 sidebar-offcanvas" id="sidebarAllPgs">
+             <div class="col-6 col-md-3 sidebar-offcanvas" id="sidebarAllPgspp">
 
             <?php } ?>
-                <div class="list-group">
-                    <ul class="menu">
-
-                        <li>
-
-                            <!-- First Tier Drop Down -->
-                            <label for="drop-2" class="toggle">Categories </label>
-                            <a>Categories</a>
-                            <input type="checkbox" id="drop-2" />
-                            <ul id="pp">
+                <div class="btn-group show-on-hover">
+          <button type="button" class="btn btn-default dropdown-toggle menubb" data-toggle="dropdown">
+            Action <span class="caret"></span>
+          </button>
+           <ul class="dropdown-menu main-menu-box" role="menu">
+            
 
                                     <?php foreach($category as $key => $cat) { ?>
-                                <li>
+                                <li class="dropdown-submenu">
 
                                     <!-- Second Tier Drop Down -->
-                                    <label for="drop-3" class="toggle">Works </label>
-                                    <a><?php echo $cat['cat_name'];?></a>
-                                    <input type="checkbox" id="drop-3" />
-                                <ul>
+                                    
+                                    <a  tabindex="-1" href="#"><?php echo $cat['cat_name'];?></a>
+                                    
+                                <ul  class="dropdown-menu">
             <?php $subcatname = $this->db->get_where('subcategory',array('cat_id' =>  $cat['cat_id']))->result_array(); ?>
             
                 <?php foreach($subcatname as $subcat){ ?>
-                <li><a href="<?php echo base_url().'Home/subcat/'.$cat['cat_id'];?>"><?php echo $subcat['subcat_name'];?></a>
+                <li><a tabindex="-1" href="<?php echo base_url().'Home/subcat/'.$cat['cat_id'];?>"><?php echo $subcat['subcat_name'];?></a>
                                 </li>
                             <?php } ?>
                                     </ul>

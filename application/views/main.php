@@ -15,11 +15,20 @@
     .slick-slide img {
       width: 100%;
     }
+    .slick-track{
+        margin-bottom: 4% !important;
+    }
 
     .slick-prev:before,
     .slick-next:before {
 
-        color: white;
+        color: black;
+        padding-top:10% !important; 
+    }
+    .slick-prev.slick-arrow,
+    .slick-next.slick-arrow{
+
+        padding-top:25% !important; 
     }
   </style>
 
@@ -39,25 +48,25 @@
     <div class="row aa">
         <div class="col-md-12">
             <!-- <img class="img-responsive" src="<?php echo base_url();?>assets/images/bannerb.png"> -->
-    <section class="autoplay slider " style="margin: 0px auto;" >
+    <section class="autoplay slider " style="margin: 0px auto;width: 100%;" >
              <div>
-               <img style="width: 100%; height: 40vh;" src="<?php echo base_url();?>assets/images/slider/1.png">
+               <img style="width: 100%; height: 50vh;" src="<?php echo base_url();?>assets/images/slider/1.png">
              </div>
 
              <div>
-               <img style="width: 100%; height: 40vh;" src="<?php echo base_url();?>assets/images/slider/2.png">
+               <img style="width: 100%; height: 50vh;" src="<?php echo base_url();?>assets/images/slider/2.png">
              </div>
 
              <div>
-               <img style="width: 100%; height: 40vh;" src="<?php echo base_url();?>assets/images/slider/3.png">
+               <img style="width: 100%; height: 50vh;" src="<?php echo base_url();?>assets/images/slider/3.png">
              </div>
 
              <div>
-               <img style="width: 100%; height: 40vh;" src="<?php echo base_url();?>assets/images/slider/4.png">
+               <img style="width: 100%; height: 50vh;" src="<?php echo base_url();?>assets/images/slider/4.png">
              </div>
 
              <div>
-               <img style="width: 100%; height: 40vh;" src="<?php echo base_url();?>assets/images/slider/5.png">
+               <img style="width: 100%; height: 50vh;" src="<?php echo base_url();?>assets/images/slider/5.png">
              </div>
 
              <div>
@@ -68,14 +77,14 @@
 
     <div class="row">
     <?php foreach($category as $cat){ ?>
-        <div id="image-changer" class="col-6 col-lg-4">
+        <div id="image-changer" class="col-6 col-lg-4 shadowback">
             <img class="catMain" src="<?php echo base_url().$caturl.$cat['cat_img']; ?>">
             <h2><?php echo $cat['cat_name']; ?></h2>
             <p><!-- Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. --> 
              <?php $subcatname = $this->db->get_where('subcategory',array('cat_id' =>  $cat['cat_id']))->result_array(); ?>
             
                 <?php foreach($subcatname as $subcat){ ?>   
-                <a class="btn btn-secondary" href="<?php echo base_url().'Home/subcat/'.$cat['cat_id']; ?>" role="button"><?php echo $subcat['subcat_name'];?> &raquo;</a>
+                <a class="btn btn-secondary btn-danger" href="<?php echo base_url().'Home/subcat/'.$cat['cat_id']; ?>" role="button"><?php echo $subcat['subcat_name'];?> &raquo;</a>
                  <?php } ?>
                 </p>
             <p>
