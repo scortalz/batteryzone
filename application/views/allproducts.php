@@ -6,12 +6,12 @@
  ?>
 <style type="text/css" >
  * {
-  font-family: "Roboto";
+  
   list-style: none;
   margin: 0;
   padding: 0;
   text-decoration: none;
-  letter-spacing: 1px;
+  
   box-sizing: border-box;
 }
 body {
@@ -44,7 +44,7 @@ body {
 }
 .top {
   border-bottom: 1px solid #e5e5e5;
-  padding-bottom: 10px;
+  padding-bottom: 10px; 
 }
 .top ul {
   display: -webkit-box;
@@ -61,10 +61,15 @@ body {
   color: #c7ccdb;
 }
 .converse {
-  padding: 2px 10px;
+  padding-top: 5px;
+  padding-left: 43%;
   border-radius: 20px;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 20px;
+  text-align: center!important;
+  color: rgba(152,0,0,0.8);
+  font-weight: 700;
+
 }
 .middle {
   margin-bottom: 40px;
@@ -73,6 +78,7 @@ body {
   width: 100%;
 }
 .bottom {
+  padding-bottom: 25px;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -107,6 +113,8 @@ body {
   color: #f00;
   text-decoration: line-through;
 }
+
+
    
 </style>
 
@@ -125,15 +133,14 @@ body {
 </div>
 <?php foreach($selectedpro as $products) { ?>
 
-<div class="block">
+<div class="  block">
   
-  <div class="top">
-    <ul>
-      <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-      <li><span class="converse"><?php echo $products['p_name']; ?></span></li>
-      <li><a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
-</a></li>
-    </ul>
+  <div class="top converse">
+     <ul>
+      
+      <li><span class=" "><?php echo $products['p_name']; ?>  </span></li>
+    
+    </ul> 
   </div>
   
   <div class="middle">
@@ -143,8 +150,9 @@ body {
   <div class="bottom">
     <div class="heading"><?php echo $products['p_name']; ?></div>
     <div class="price"><?php echo $products['p_price']; ?></div>
+</div>
     <a href="<?php echo base_url().'Home/products/'.$products['p_id']; ?>" class="btn btn-primary">Buy Now</a>
-  </div>
+  
   
 </div>
 

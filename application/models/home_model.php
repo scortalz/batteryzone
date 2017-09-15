@@ -22,6 +22,16 @@ Class Home_model extends CI_Model
 
       }
 
+      function getallselectedprosearch($searsel){
+
+        $this->db->select('*');
+        $this->db->from('products');
+        $this->db->where('cat_id',$searsel);
+        $data=$this->db->get();
+        return $data->result_array();
+
+      }
+
       function getallpro(){
 	 
 	    $this->db->select('*');
@@ -32,12 +42,27 @@ Class Home_model extends CI_Model
       
 	  function getproduct($form){
 
-	  	$this->db->select('*');
+	  	  $this->db->select('*');
         $this->db->from('products');
         $this->db->where('p_id',$form);
         $data=$this->db->get();
         return $data->result_array();
 	  }
+
+
+
+    function getdatafromdbsearch($name){
+
+        $this->db->like('p_name', $name, 'both');
+        $data=$this->db->get('products');
+        return $data->result_array();
+    }
+    function getsrcselectedpro($srcinpt,$searsel){
+        $this->db->like('p_name', $srcinpt, 'both');
+        $this->db->like('cat_id', $searsel, 'both');
+        $data=$this->db->get('products');
+        return $data->result_array();
+    }
 }
 
 ?>

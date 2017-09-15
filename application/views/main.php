@@ -76,19 +76,18 @@
     </div>
 
     <div class="row">
-    <?php foreach($category as $cat){ ?>
-        <div id="image-changer" class="col-6 col-lg-4 shadowback">
-            <img class="catMain" src="<?php echo base_url().$caturl.$cat['cat_img']; ?>">
-            <h2><?php echo $cat['cat_name']; ?></h2>
-            <p><!-- Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. --> 
-             <?php $subcatname = $this->db->get_where('subcategory',array('cat_id' =>  $cat['cat_id']))->result_array(); ?>
+    <?php $count = 0; foreach($category as $cat){ ?>
+
+        <div id="image-changer" class="col-md-3 shadowback">
+ <img class="catMain" src="<?php echo base_url().$caturl.$cat['cat_img']; ?>"></img> 
+  <span id="txtImg" class="txtImg"><?php echo $cat['cat_name']; ?></span>
+  <h2><span class="txtImgg"><?php echo $cat['cat_name']; ?></span></h2>
+<p> <?php $subcatname = $this->db->get_where('subcategory',array('cat_id' =>  $cat['cat_id']))->result_array(); ?>
             
-                <?php foreach($subcatname as $subcat){ ?>   
-                <a class="btn btn-secondary btn-danger" href="<?php echo base_url().'Home/subcat/'.$cat['cat_id']; ?>" role="button"><?php echo $subcat['subcat_name'];?> &raquo;</a>
-                 <?php } ?>
-                </p>
-            <p>
-            </p>
+      <?php foreach($subcatname as $subcat){ ?>   
+    <a class="btn btn-secondary btn-primary btn-block " href="<?php echo base_url().'Home/subcat/'.$cat['cat_id']; ?>" role="button"><?php echo $subcat['subcat_name'];?> &raquo;</a>
+               <?php } ?>
+              </p> 
         </div>
         <?php } ?>
 
@@ -125,7 +124,7 @@
         <div class="col-md-12 proHead"><i class="fa fa-star" aria-hidden="true"></i> New arrivals</div>
     </div>
     <div class="row">
-    <?php foreach ($products as $proforeach) { ?>
+    <?php $count = 0; foreach ($products as $proforeach) { ?>
         <div class="col-md-2 ">
             <img class="picIn" src="<?php echo base_url().$prourl.$proforeach['p_main_image'];?>"> </span>
             <span class="textIn"><?php echo $proforeach['p_name']; ?></span>
@@ -133,34 +132,52 @@
             <center>
                 <span class="price"><?php echo $proforeach['p_price']; ?> </span>
                 <br>
-                <span class="order"> Order Now  </span> </center>
+                <a class="order" 
+                href="<?php echo base_url();?>Home/products/<?php echo $proforeach['p_id'];?>"> Order Now  </a>
             <hr class="hrr">
         </div>
-<?php } ?>
+<?php  $count++;
+        if ($count == 6) {
+          break;
+        }   } ?>
     </div>
 
     <div class="row">
         <div class="col-md-12 proHead"><i class="fa fa-star" aria-hidden="true"></i> Featured Products</div>
     </div>
     <div class="row">
-    <?php foreach ($products as $proforeach) { ?>
+    <?php  $count = 0; foreach($featurepro as $featured) { ?>
         <div class="col-md-2 ">
-            <img class="picIn" src="<?php echo base_url().$prourl.$proforeach['p_main_image'];?>"> </span>
-            <span class="textIn"><?php echo $proforeach['p_name']; ?></span>
+            <img class="picIn" src="<?php echo base_url().$prourl.$featured['p_main_image'];?>"> </span>
+            <span class="textIn"><?php echo $featured['p_name']; ?></span>
             <br>
             <center>
-                <span class="price"> <?php echo $proforeach['p_price']; ?> </span>
+                <span class="price"> <?php echo $featured['p_price']; ?> </span>
                 <br>
-                <span class="order"> Order Now  </span> </center>
+                <a class="order" 
+                href="<?php echo base_url();?>Home/products/<?php echo $featured['p_id'];?>"> Order Now  </a> </center>
             <hr class="hrr">
         </div>
-        <?php } ?>
+        <?php 
+        $count++;
+        if ($count == 6) {
+          break;
+        }
+      } ?>
    
     </div>
 
 </div>
 
-
+<!-- <form action="asdsad" method="post" id="search">
+  
+  <input type="text" name="name" />
+  <button type="submit">submit</button>
+</form>
+ -->
  
     
 <?php include_once('layout/footer.php');?>
+
+<script type="text/javascript">
+ 

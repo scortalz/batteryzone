@@ -69,11 +69,39 @@
 </footer>
 
     </div><!--/.container-->
-     <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+     <script src="<?php echo base_url();?>assets/js/jquery-2.2.0.min.js" type="text/javascript"></script>
 <script src="<?php echo base_url();?>assets/slick/slick.js" type="text/javascript" charset="utf-8"></script>
 
 <script type="text/javascript">
-    
+/*$('#autocomplete').submit(function(event){
+  event.preventDefault();
+*/
+$('#txtHint').click(function(){
+var hint = $('#txtHint').html();
+var proidhref = $('#pro-id').html();
+parseInt(proidhref);
+window.location = "<?php echo base_url();?>home/products/"+proidhref;
+});
+function getdata(val){
+
+ $.ajax({
+      url: "<?php echo base_url();?>Home/checking",
+      type: "POST",
+      data: ({ p_val: val }),
+      dataType: "json",
+
+      success: function(response) {
+        $('.sugest').show();
+        $('#txtHint').html(''); 
+        $('#pro-id').html('');
+        $('#txtHint').append(response.p_name);
+        $('#pro-id').append(response.p_id);
+      }
+
+    });
+ }
+/*});*/
+
 
 $.noConflict();
 jQuery( document ).ready(function( $ ) {
@@ -257,13 +285,46 @@ function getCurrentScroll() {
 
 
 $(document).ready(function(){
-    /*$("#sidebarHomepp .dropdown-menu main-menu-box").css("display","block");*/
-    var temp = $("#sidebarAllPgspp");
-    if(temp.length !== 0){
+     
+    var sidebarr = $("#sidebarAllPgs");
+    if(sidebarr.length == 0){
         $(".main-menu-box").css("display","block");
     }
     
 });
+
+
+$(".show-on-hover").hover(function(){
+     
+    var sidebarr = $("#sidebarAllPgs");
+    if(sidebarr.length !== 0){
+        $(".main-menu-box").hide();
+    }
+     
+ 
+});
+
+
+$(".show-on-hover").mouseover(function() {
+
+    $(".main-menu-box").show();
+
+});
+
+$(".shadowback").mouseover(function() {
+
+    $(".txtImg").hide();
+
+});
+
+
+$(".shadowback").mouseout(function() {
+
+    $(".txtImg").show();
+
+});
+
+
 </script>
 
   </body>

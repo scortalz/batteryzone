@@ -129,11 +129,11 @@
             <form action="<?php echo base_url();?>Home/products/add-order" method="post" class="form-horizontal formm" id="orderform">
 
 
-                <fieldset>
+                <fieldset class="formM">
 
                     <!-- Form Name -->
                     <legend>
-                        <center> Order Form</center>
+                        <center class="formH"> Order Form</center>
                     </legend>
 
                     <!-- Text input-->
@@ -225,7 +225,7 @@
                     <!-- Button  -->
                     <div class="form-group">
 
-                        <div class="col-md-12">
+                        <div class="col-md-12 text-center">
                             <button type="submit" id="submit" class="btn btn-success">Order Now</button>
                         </div>
                     </div>

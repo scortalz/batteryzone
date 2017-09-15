@@ -45,6 +45,13 @@ Class Cmsdata extends CI_Model
             $data=$this->db->get();
             return $data->result_array();
         }
+        function featurepro(){
+            $this->db->select('*');
+            $this->db->from('products');
+            $this->db->where('p_isfeature',1);
+            $data=$this->db->get();
+            return $data->result_array();
+        }
 
     function addbanner($bannerimage){
           $data = array('b_img' => $bannerimage,

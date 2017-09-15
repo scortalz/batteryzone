@@ -22,6 +22,7 @@ class Home extends CI_Controller {
 		
 		$this->data['category']		= $this->cmsdata->getallcategory();
 		$this->data['subcategory']	= $this->cmsdata->subcatdetail();
+		$this->data['featurepro']	= $this->cmsdata->featurepro();
 		$this->data['products'] 	= $this->cmsdata->getallproducts();
 		$this->data['banner'] 		= $this->cmsdata->getallbanner();
 
@@ -111,6 +112,40 @@ class Home extends CI_Controller {
 		$this->load->view('allproducts',$this->data); //  View Product page
 	}
 
+	public function getmanualsearchdata(){
+		$srcinpt = $this->input->post('sear-inp');
+		$searsel = $this->input->post('sear-sel');
+		trim($searsel);
+		trim($srcinpt);
+		if (!empty($searsel && $srcinpt)) {
+
+		$this->data['selectedpro']	= $this->home_model->getsrcselectedpro($srcinpt,$searsel);
+
+
+		}
+
+		if (!empty($searsel) && empty($srcinpt)) {
+
+		$this->data['selectedpro']	= $this->home_model->getallselectedprosearch($searsel);
+		}
+
+		if (empty($searsel) && !empty($srcinpt)) {
+
+		$this->data['selectedpro']	= $this->home_model->home_model->getdatafromdbsearch($srcinpt);
+		}
+
+
+		if (empty($searsel) && empty($srcinpt)) {
+
+		$this->data['selectedpro']	= $this->home_model->getallpro();
+		}
+
+		$this->load->model('cmsdata');
+		$this->data['pagename'] = 'products';
+		$this->data['category']	= $this->cmsdata->getallcategory();
+		$this->load->view('allproducts',$this->data); //  View Product page
+	}
+
 	public function askaquestion(){
 		
 
@@ -126,6 +161,12 @@ class Home extends CI_Controller {
 		$this->home_model->insertquestion($data);
 		redirect($_SERVER['HTTP_REFERER']);
 	}
+
+	public function checking(){
+		$name = $this->input->post('p_val');
+		$data = $this->home_model->getdatafromdbsearch($name);
+		echo json_encode($data[0]);
+	} 
 
 
 	}

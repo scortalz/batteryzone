@@ -17,6 +17,14 @@
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/fa/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/slick/slick-theme.css">
+        <link href='https://fonts.googleapis.com/css?family=Alegreya SC' rel='stylesheet'>
+
+<link href='https://fonts.googleapis.com/css?family=Almendra SC' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Cormorant Unicase' rel='stylesheet'><link href='https://fonts.googleapis.com/css?family=Delius Swash Caps' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Englebert' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Finger Paint' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Fondamento' rel='stylesheet'>
+        
 
 
     <script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
@@ -24,58 +32,7 @@
 
     <style>
         /* for testing purposes */
-
-.show-on-hover:hover > ul.dropdown-menu {
-    display: block !important;    
-}
-
-.dropdown-submenu {
-    position: relative !important;
-}
-
-.dropdown-submenu>.dropdown-menu {
-    top: 0 !important;
-    left: 100% !important;
-    margin-top: -6px !important;
-    margin-left: -1px !important;
-    -webkit-border-radius: 0 6px 6px 6px !important;
-    -moz-border-radius: 0 6px 6px !important;
-    border-radius: 0 6px 6px 6px !important;
-}
-
-.dropdown-submenu:hover>.dropdown-menu {
-    display: block !important;
-}
-
-.dropdown-submenu>a:after {
-    display: block !important;
-    content: " " !important;
-    float: right !important;
-    width: 0 !important;
-    height: 0 !important;
-    border-color: transparent !important;
-    border-style: solid !important;
-    border-width: 5px 0 5px 5px !important;
-    border-left-color: #ccc !important;
-    margin-top: 5px !important;
-    margin-right: -10px !important;
-}
-
-.dropdown-submenu:hover>a:after {
-    border-left-color: #fff !important;
-}
-
-.dropdown-submenu.pull-left {
-    float: none !important;
-}
-
-.dropdown-submenu.pull-left>.dropdown-menu {
-    left: -100% !important;
-    margin-left: 10px !important;
-    -webkit-border-radius: 6px 0 6px 6px !important;
-    -moz-border-radius: 6px 0 6px 6px !important;
-    border-radius: 6px 0 6px 6px !important;
-}
+  
     </style>
 </head>
 
@@ -127,12 +84,13 @@
                     <div class="col-lg-9 col-md-9 ">
                         <span class="headerrr">
                         <?php foreach ($category as $cat){ ?>
-    
-
-               <a class="btn btn-secondary" href="<?php echo base_url().'Home/subcat/'.$cat['cat_id'];?>" role="button"><?php echo $cat['cat_name']; ?></a> 
+     
+               <a class="btn btn-danger" href="<?php echo base_url().'Home/subcat/'.$cat['cat_id'];?>" role="button"><?php echo $cat['cat_name']; ?></a> 
              
                     <?php } ?>
              
+
+
                     </div>
 
                 </div>
@@ -228,22 +186,24 @@ WORRY-FREE shopping experience</span></span>
         </form> -->
 
                             <div id="custom-search-input">
+                                <form action="<?php echo base_url();?>Home/getmanualsearchdata" method="post">
                                 <div class="input-group col-md-12 col-xs-6">
-                                    <input type="text" class="form-control input-lg" placeholder="Search" />
-                                    <select>
-                                    <option> Select Categories</option>
+                                    <input type="text" name="sear-inp" class="search-pro form-control input-lg" placeholder="Search" value="" onkeyup="getdata(this.value)"/>
+                                    <select name="sear-sel">
+                                    <option value="" > Select Categories</option>
                                      <?php foreach ($category as $cat){ ?>
-                                    <option><?php echo $cat['cat_name']; ?></option>
+                                    <option value="<?php echo $cat['cat_id']; ?>"><?php echo $cat['cat_name']; ?></option>
                                       
                                     <?php } ?>
                                     </select>
                                     <span class="input-group-btn">
-                        <button class="btn btn-info btn-lg" type="button">
+                        <button type="submit" style="cursor:pointer;" class="btn btn-info btn-lg">
               <i class="fa fa-search" aria-hidden="true"></i>          </button>
+</form>
                     </span>
                                 </div>
                             </div>
-
+<span class="sugest" style="display:none;">Suggestions: <span id="txtHint" style="cursor:pointer;"></span></span><span style="display:none;" id="pro-id"></span>
 
 
                         </div>
@@ -272,30 +232,30 @@ WORRY-FREE shopping experience</span></span>
 
         <div class="row row-offcanvas row-offcanvas-left">
         <?php if(isset($pagename) && $pagename == 'main') { ?>
-            <div class="col-6 col-md-3 sidebar-offcanvas" id="sidebarHomepp">
+            <div class="col-6 col-md-3 sidebar-offcanvas" id="sidebarHome">
             <?php } else { ?>
-             <div class="col-6 col-md-3 sidebar-offcanvas" id="sidebarAllPgspp">
+             <div class="col-6 col-md-3 sidebar-offcanvas" id="sidebarAllPgs">
 
             <?php } ?>
                 <div class="btn-group show-on-hover">
-          <button type="button" class="btn btn-default dropdown-toggle menubb" data-toggle="dropdown">
-            Action <span class="caret"></span>
+          <button type="button" class="btn btn-default dropdown-toggle menubb  " data-toggle="dropdown">
+            All Categories <span class="caret"></span>
           </button>
-           <ul class="dropdown-menu main-menu-box" role="menu">
-            
+           <ul class="dropdown-menu main-menu-box  " role="menu">
+          
 
                                     <?php foreach($category as $key => $cat) { ?>
-                                <li class="dropdown-submenu">
+                                <li class="dropdown-submenu  ">
 
-                                    <!-- Second Tier Drop Down -->
+                                   
                                     
-                                    <a  tabindex="-1" href="#"><?php echo $cat['cat_name'];?></a>
+                                    <a  tabindex="-1" ><?php echo $cat['cat_name'];?></a>
                                     
-                                <ul  class="dropdown-menu">
+                                <ul  class="dropdown-menu  ">
             <?php $subcatname = $this->db->get_where('subcategory',array('cat_id' =>  $cat['cat_id']))->result_array(); ?>
             
                 <?php foreach($subcatname as $subcat){ ?>
-                <li><a tabindex="-1" href="<?php echo base_url().'Home/subcat/'.$cat['cat_id'];?>"><?php echo $subcat['subcat_name'];?></a>
+                <li class=" "><a tabindex="-1" href="<?php echo base_url().'Home/subcat/'.$cat['cat_id'];?>"><?php echo $subcat['subcat_name'];?></a>
                                 </li>
                             <?php } ?>
                                     </ul>
