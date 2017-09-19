@@ -29,7 +29,7 @@
         <!-- Main Row -->
         <div class="col-md-4 ProName ">
             <!-- Picture Plugin Start -->
-            <img id="batteryimage" class="img-responsive" style="cursor: pointer" data-toggle="modal" data-target="#myModal2" src="<?php echo base_url().$prourl.$product['p_main_image'];?>">
+            <img id="batteryimage" class="img-responsive imggSub" style="cursor: pointer" data-toggle="modal" data-target="#myModal2" src="<?php echo base_url().$prourl.$product['p_main_image'];?>">
 
             <div class="modal fade" id="myModal2" role="dialog">
                 <div class="modal-dialog modal-md">
@@ -40,7 +40,7 @@
                         </div>
                         <div class="modal-body">
 
-                            <center><img src="<?php echo base_url().$prourl.$product['p_main_image'];?>">
+                            <center><img class="imggModal" src="<?php echo base_url().$prourl.$product['p_main_image'];?>">
                             </center>
 
                         </div>

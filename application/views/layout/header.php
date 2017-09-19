@@ -32,7 +32,8 @@
 
     <style>
         /* for testing purposes */
-  
+
+
     </style>
 </head>
 
@@ -85,7 +86,7 @@
                         <span class="headerrr">
                         <?php foreach ($category as $cat){ ?>
      
-               <a class="btn btn-danger" href="<?php echo base_url().'Home/subcat/'.$cat['cat_id'];?>" role="button"><?php echo $cat['cat_name']; ?></a> 
+               <a class="btn btn-dangerr" href="<?php echo base_url().'Home/subcat/'.$cat['cat_id'];?>" role="button"><?php echo $cat['cat_name']; ?></a> 
              
                     <?php } ?>
              
@@ -106,9 +107,9 @@
                 <!-- header er  -->
 
 
-                <div class="col-md-9 col-sm-8 col-xs-12">
+                <div class="col-md-9 col-sm-8 col-xs-3">
                     <div class="row">
-                        <div class="col-md-3 col-sm-4 col-xs-12">
+                        <div class="col-md-3 col-sm-4 col-xs-1">
 
                             <a href="<?php echo base_url();?>"> <img src="<?php echo base_url();?>assets/images/logo1.png" class="logo"></a>
 
@@ -130,11 +131,11 @@
 WORRY-FREE shopping experience</span></span>  
                                     
                                    
-               <i class="fa fa-check-square-o fa-2x fapad2" aria-hidden="true"> </i>
+               <i class="fa fa-check-square-o fa-2x fapad2 fapad3" aria-hidden="true"> </i>
                 <span class="tip icoo" >  <b>7 </b> <br><b class="topFaTxt">Days</b>  <span>FREE 7-Day replacement policy on all products from the day of delivery (Applicable in Pakistan only)</span></span>                     
 
                                     
-              <i class="fa fa-phone-square fa-2x fapad2" aria-hidden="true"></i>   <span class="tip icoo" >  <b>Call Us</b> <br><b class="topFaTxt">0303-1234567</b>  <span>We offer to pay Cash on Delivery for a
+              <i class="fa fa-phone-square fa-2x fapad2 fapad4" aria-hidden="true"></i>   <span class="tip icoo" >  <b>Call Us</b> <br><b class="topFaTxt topFaTxt2">0123-4567890</b>  <span>We offer to pay Cash on Delivery for a
 WORRY-FREE shopping experience</span></span>                                   
                                   
                       
@@ -144,7 +145,7 @@ WORRY-FREE shopping experience</span></span>
  
                 </div>
 
-                <div class="col-md-3 col-sm-4 col-xs-12">
+                <div class="col-md-3 col-sm-4 col-xs-3">
  
                     <div class="row">
  
@@ -169,7 +170,7 @@ WORRY-FREE shopping experience</span></span>
             </div>
 
             <div class="row">
-                <div class="col-md-3 col-sm-3 col-xs-12">
+                <div class="col-md-3 col-sm-3 col-xs-3">
 
 
 
@@ -177,9 +178,9 @@ WORRY-FREE shopping experience</span></span>
 
 
 
-                <div class="col-md-9 col-sm-9 col-xs-12">
+                <div class="col-md-9 col-sm-9 col-xs-3">
                     <div class="row">
-                        <div class="col-md-9 col-xs-12 searchUp">
+                        <div class="col-md-9 col-xs-3 searchUp">
                             <!-- <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -187,7 +188,7 @@ WORRY-FREE shopping experience</span></span>
 
                             <div id="custom-search-input">
                                 <form action="<?php echo base_url();?>Home/getmanualsearchdata" method="post">
-                                <div class="input-group col-md-12 col-xs-6">
+                                <div class="input-group col-md-12 ">
                                     <input type="text" name="sear-inp" class="search-pro form-control input-lg" placeholder="Search" value="" onkeyup="getdata(this.value)"/>
                                     <select name="sear-sel">
                                     <option value="" > Select Categories</option>

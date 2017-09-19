@@ -84,30 +84,30 @@
 
 
 
-    
+    <div class="row">
     <?php $count = 0; foreach($category as $cat){ ?>
 
         <div id="image-changer" class="col-md-3 shadowback">
  
  <img class="catMain" src="<?php echo base_url().$caturl.$cat['cat_img']; ?>"></img>
 
-  <span id="txtImg" class="txtImg "><?php echo $cat['cat_name']; ?></span>
+  <span id="txtImg" class="txtImg"><?php echo $cat['cat_name']; ?></span>
 
-  <h2><span  class="txtImgg "><?php echo $cat['cat_name']; ?></span></h2>
+  <h2><span class="txtImgg"><?php echo $cat['cat_name']; ?></span></h2>
 
-
-  <?php $subcatname = $this->db->get_where('subcategory',array('cat_id' =>  $cat['cat_id']))->result_array(); ?>
+<p> 
+  <?php $subcatname = $this->db->get_where('subcategory',array('cat_id' =>  $cat['cat_id']))->result_arr  ay(); ?>
             
-     <div class="abc" >  <?php foreach($subcatname as $subcat){ ?>   
-  <p  class="">  <a class="aImg txtP" href="<?php echo base_url().'Home/subcat/'.$cat['cat_id']; ?>" role="button"><?php echo $subcat['subcat_name'];?>  </a></p> 
-               <?php } ?></div>
-              
+      <?php foreach($subcatname as $subcat){ ?>   
+    <a class="   aImg " href="<?php echo base_url().'Home/subcat/'.$cat['cat_id']; ?>" role="button"><?php echo $subcat['subcat_name'];?> &raquo;</a>
+               <?php } ?>
+              </p> 
         </div>
         <?php } ?>
 
     </div>
     <!--/row-->
-
+</div>
 <!--/span-->
 
 

@@ -13,15 +13,7 @@ body {
     background-size: cover;
  }
 
- #image-changer {
-     margin-bottom: 8%;
-    margin-left: 2%;
-    margin-right: 6%;
-    width: 80%;
-    position: relative; 
- }
-
- .txtImg { 
+.txtImg { 
    position: absolute; 
    top: 200px; 
    left: 0; 
@@ -29,6 +21,7 @@ body {
     color: white;
     font-size: 19px;
     background: rgba(152,0,0,0.7 );
+
 }
 
  .txtImgg { 
@@ -42,16 +35,45 @@ body {
 }
 
 
- #image-changer:hover img{
-transition: opacity 1s ease-in-out;
-opacity: 0.2;
-position: absolute;
+.txtImggg {
+  background: rgba(255,0,0);
+}
+
+
+ #image-changer {
+ 
+      z-index: 1;
+      margin-bottom: 8%;
+      margin-left: 2%;
+      margin-right: 6%;
+      width: 80%;
+      position: relative; 
+      background-color: rgba(152,0,0,0.2);
  }
+ 
+
+ #image-changer:hover img{
+ 
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0.2;
+    position: absolute;
+    z-index: -1;
+
+ }
+ 
+ 
+  .txtP{
+    padding-left: 5%;
+  }
+
+  .txtP:hover{
+    color: rgba(152,0,0,0.9);
+  }
 
  #image-changer h2{
   display: none; 
 }
-
+ 
 
 #image-changer span{
   display: block;
@@ -75,6 +97,17 @@ position: absolute;
 
 }
  
+
+ .imggSub {
+  width: 300px; height: 200px;
+ }
+
+  .imggModal {
+    width: 350px; height: 300px;
+  }
+
+
+  
 footer {
   padding: 30px 0;
 }
@@ -88,13 +121,15 @@ footer {
 
 }
 
-.headerrr .fa { color: rgb(152,0,1); }
+.headerrr .fa {
+  color: rgb(152,0,1); 
+}
 
 .icoo {
-font-size: 12px;
-text-transform: uppercase;
-font-weight: bolder;
-margin: 0 2% 0 0.5%;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin: 0 2% 0 0.5%;
     line-height: 14.5px;
  
  }
@@ -149,12 +184,12 @@ span.tip:hover span {
      
 }
 
-  .logo 
- {
-    width: 100%; 
+ 
+    .logo {
+    width: 111%;
     height: 100%;
     padding-top: 1.5%;
-    margin-left: 35%;
+    margin-left: 23%;
      
  }
  
@@ -278,9 +313,9 @@ margin-left: 1px;
  .stickyLogo 
     {
 
-        width: 100%;
-        height: 60%;
-            margin-top: 11%;
+           width: 83%;
+    height: 55%;
+            margin-top: 8%;
     }
   .headerr {
     position: fixed;
@@ -371,6 +406,7 @@ margin-left: 1px;
       
      #sidebarHome .dropdown-submenu:hover>a:after {
           border-left-color: #fff;
+
       }
       
     #sidebarHome  .dropdown-submenu.pull-left {
@@ -391,7 +427,9 @@ margin-left: 1px;
   background-color: rgba(0,0,0,0.8);
   color:white;
   font-weight: 700;
-  padding: 10px 2vw;
+  padding: 10px 3vw;
+  
+
 
 }
   
@@ -400,6 +438,7 @@ margin-left: 1px;
   padding: 0px 0vw 0px 0%;
   margin-top: -2px;
   width: 100%
+
 }
  
 
@@ -409,15 +448,16 @@ margin-left: 1px;
   text-decoration: none;
   list-style: none!important;
   list-style-type: none!important;
-   padding: 5px 0px; 
-   z-index: 100000;
+  padding: 5px 0px; 
+  z-index: 100000;
+
 
 }
 
 #sidebarHome .main-menu-box li{
-    width: 100%;
-   padding: 7px; 
- border-bottom: thin dotted #333;
+      width: 100%;
+      padding: 7px; 
+     border-bottom: thin dotted #333;
 }
 
 #sidebarHome .main-menu-box li a:hover{
@@ -441,13 +481,14 @@ margin-left: 1px;
   top: 5px !important;
   left: 100%!important;
    z-index: -1!important;
+
 }
 
 
  #sidebarHome {
 
   margin-top: -6.5%;
-  padding-left: 7%;
+  padding-left: 5%;
  }
 
 
@@ -458,7 +499,7 @@ margin-left: 1px;
  #sidebarAllPgs {
 
   margin-top: -6.5%;
-  padding-left: 7%;
+  padding-left: 5%;
  }
 
 
@@ -528,7 +569,7 @@ margin-left: 1px;
   background-color: rgba(0,0,0,0.8);
   color:white;
   font-weight: 700;
-  padding: 10px 2vw;
+  padding: 10px 3vw;
 
 }
   
@@ -577,9 +618,19 @@ margin-left: 1px;
    z-index: -1!important;
 }
 
- /* End of Sidebar All Pages */
 
- 
+.aImg {
+  display: block;
+  color: black;
+  font-size: 22px;
+  padding-top: 4%;
+ /* End of Sidebar All Pages */
+}
+
+ .bannerUnder {
+  margin: 4% -2%;
+  width: 100%;
+ }
   
 
 /* Footer All pages */
@@ -684,17 +735,18 @@ text-decoration: underline overline;
 }
 
   .picIn  {
+
  width: 50%;
 
 }
 
 .textIn {
-  color: white;
+  color: rgb(0,0,0,0.8);
   text-transform: capitalize;
 }
  
 .price {
-  color: red;
+  color: rgba(0,0,0,0.8);
   font-weight: bold;
 }
 
@@ -716,11 +768,24 @@ width: 105%;
     border-width: 2px;
   }
 
+
+ .btn-dangerr {
+        color: white;
+        background-color: rgba(152,0,0,0.7);
+        padding: 1.1% 1.3%;
+        font-size: 28px;
+    }
+    
+      .btn-dangerr:hover { 
+        color: lightblue;
+      }  
+
+
 @media all  and (min-width: 1201px) {
 
  .aside {
-        margin-top: -56%!important;
-        margin-left: -109px!important;
+        margin-top: -100%!important;
+        margin-left: -6%!important;
        }
 
        #sidebarHome li{
@@ -732,102 +797,10 @@ width: 105%;
 
 }
 
-
-@media all  and (min-width: 993px)  and (max-width: 1200px){
-
-       .padEnd {
-       padding: 0px!important;
-       left: 7px;
-       }      
-
-      .info992{
-      
-        padding: 0 1px 0 0px!important; 
-       }
-
-       .aside {
-        margin-top: -67%!important;
-        margin-left:  -12%;
-       }
-
-        #sidebarHome li{
-        width: 100%!important;
-      }    
-
-
-}
-
-@media all  and (min-width: 768px) and (max-width: 992px)   {
-          .medQrSm {
-        padding: 15px 0 0 44px;
-        
-          }
-        
-          .medqrmd{
-            padding: 0 7px 0 15px ;
-          }
-        
-        .SmDelivr{
-          padding: 0 2% 0 0;
-           margin: -136px 0px 2px 286px;
-        }
-        
-
-         .aside {
-        margin-top: -120%!important;
-        margin-left:  -17%;
-       }
-        #sidebarHome li{
-        width: 100% ;
-      }  
-
-         #sidebarHome li{
-        width: 136% ;
-      }  
-
-     
-}
  
 
-
-@media all and (max-width: 767px) and (min-width: 576px)  {
  
-}
-@media all and (max-width: 575px) and (min-width: 250px)  {
-
-              .SmDelivr{
-                padding: 0 2% 0 0;
-                 margin: -136px 0px 2px 286px;
-              }
-
-               .padEnd {
-                padding: 0 2% 0 0;
-               left: 0px;
-
-              }
-
-               .medQrSm {
-                padding: 2% 2% 0 0;      
-               }
-
-                .xxs {
-
-                  margin: -7px;
-
-                }
-                .infoxs {
-
-                    margin-left: -13px;
-                   margin-right: -15px;
-                   padding-right: 0px;
-                   padding-bottom: 9px;
-
-                }
-
-              #sidebarHome li{
-              width: 77% ;
-              }  
-  }
+ 
 /* End Footer */
 
         .ProName {
@@ -883,7 +856,11 @@ width: 105%;
         width: 60%;
 
       }
-      #fa-question-circle { color: green!important; }
+
+      #fa-question-circle { 
+      	color: green!important; 
+
+      }
 
 
         .subCatName {
@@ -903,17 +880,207 @@ width: 105%;
         height: 280px;
         width: 280px;
       }
-@media all  and (max-width: 320px)
-{
-  #batteryimage{
+
+@media all and (min-width: 100px) and (max-width: 480px) { .ProName { text-align: center; }
+
+
+ #batteryimage{
     margin-left: -50px;
   }
+.fapad {
+    margin-left: -68%;
+}
+
+.searchUp {
+    margin-top: 2.5%!important;
+}
+
+ .fapad3{
+margin-left: 33%!important;
+}
+ 
+
+ .fapad4{
+margin-left: 6%!important;
+}
+ 
+
+
+.fapad2{
+	margin-left: 0%;
+}
+ 
+.fapadSocial {
+    display: none!important;
+          margin-top: -27%;
+}
+
+.logo {
+    width: 25%;
+    height: 140%;
+    margin-left: 4%;
+}
+
+. 
+.menuButton{ 
+    margin-top: -78%;
+     }
+
+ 
+  #sidebarHome {
+      margin-top: -11%;
+    
+}
+.icoo {
+	margin-right: 1%!important; 
 }
 
 
-@media all  and (min-width: 321px)  and (max-width: 480px){ .ProName { text-align: center; } }
-@media all  and (min-width: 481px)  and (max-width: 640px){ .ProName { text-align: center; } }
-@media all  and (min-width: 641px)  and (max-width: 768px){  /*img { width: 100%!important;  }*/ 
+.aside {
+  margin-top: 5%;
+ }
+}
+
+
+
+@media all  and (min-width: 481px)  and (max-width: 575px){ .ProName { text-align: center; } 
+ 
+.fapad {
+    margin-left: -68%;
+}
+
+.searchUp {
+    margin-top: 2.5%!important;
+}
+
+ 
+
+.fapad2{
+	margin-left: 0%;
+}
+ 
+.fapadSocial {
+          margin-top: -2%;
+}
+
+.logo {
+    width: 25%;
+    
+    margin-left: 4%;
+}
+
+. 
+.menuButton{ 
+    margin-top: -78%;
+     }
+
+ 
+  #sidebarHome {
+      margin-top: -11%;
+    
+}
+.icoo {
+	margin-right: 1%!important; 
+}
+
+ }
+
+
+
+
+
+
+@media all  and (min-width: 576px)  and (max-width: 640px){ .ProName { text-align: center; } 
+ 
+    .SmDelivr{
+                padding: 0 2% 0 0;
+                 margin: -136px 0px 2px 286px;
+              }
+
+               .padEnd {
+                padding: 0 2% 0 0;
+               left: 0px;
+
+              }
+
+               .medQrSm {
+                padding: 2% 2% 0 0;      
+               }
+
+                .xxs {
+
+                  margin: -7px;
+
+                }
+                .infoxs {
+
+                   margin-left: -13px;
+                   margin-right: -15px;
+                   padding-right: 0px;
+                   padding-bottom: 9px;
+
+                }
+
+              #sidebarHome li{
+              width: 77% ;
+              }  
+
+.searchUp {
+    margin-top: 18px!important;
+}
+
+.fSocial {
+    margin-left: 20%;
+}
+
+.fapad3{
+	margin-left: 44%;
+}
+
+.fapad4{
+	margin-left: 8%;
+}
+
+ .topFaTxt2 {
+ 	font-weight: 700;
+ 	font-size: 12px;
+    font-family: initial;
+ }
+.fapadSocial {
+    margin: 0 0% 0 21%;
+}
+
+.logo {
+    width: 116%;
+    height: 151%;
+    padding-top: 1.5%;
+    margin-left: -2%;
+}
+
+.bodyContent {
+	margin-left: -5%;
+
+}
+
+.menuButton{ 
+    margin-top: -78%;
+     }
+
+ 
+  #sidebarHome {
+      margin-top: -21%;
+    margin-left: -5%;
+}
+
+
+}
+
+
+
+
+
+@media all  and (min-width: 641px)  and (max-width: 767px){ 
+
 .medQrSm {
   padding: 25px 0 0 9%;
  }
@@ -927,9 +1094,160 @@ width: 105%;
         width: 71% ;
       }  
       #sidebarHome {
-    margin-top: -3%;
-}}
-@media all  and (min-width: 769px)  and (max-width: 992px){ /*  Filhal zaruruat nahin*/ }
-@media all  and (min-width: 993px)  and (max-width: 1200px){ /* Filhal zaruruat nahin */ }
-@media all  and (min-width: 1201px){}
+      margin-top: -21%;
+    margin-left: -5%;
+}
 
+.searchUp {
+    margin-top: 18px!important;
+}
+
+.fSocial {
+    margin-left: 20%;
+}
+
+.fapad3{
+	margin-left: 44%;
+}
+
+.fapad4{
+	margin-left: 8%;
+}
+
+ .topFaTxt2 {
+ 	font-weight: 700;
+ 	font-size: 12px;
+    font-family: initial;
+ }
+.fapadSocial {
+    margin: 0 0% 0 21%;
+}
+
+.logo {
+    width: 116%;
+    height: 151%;
+    padding-top: 1.5%;
+    margin-left: -2%;
+}
+
+.bodyContent {
+	margin-left: -5%;
+
+}
+
+.menuButton{ 
+    margin-top: -78%;
+     }
+
+ 
+}
+@media all  and (min-width: 768px)  and (max-width: 991px){ 
+
+#sidebarAllPgs .menubb {
+    margin-left: -32%;
+    margin-top: -7%;
+	}
+
+          .medQrSm {
+        padding: 15px 0 0 44px;
+        
+          }
+        
+          .medqrmd{
+            padding: 0 7px 0 15px ;
+          }
+        
+        .SmDelivr{
+          padding: 0 2% 0 0;
+           margin: -136px 0px 2px 286px;
+        }
+        
+
+         .aside {
+        margin-top: -120%!important;
+        margin-left:  -17%;
+       }
+        #sidebarHome li{
+        width: 100% ;
+      }  
+
+         #sidebarHome li{
+        width: 136% ;
+      }  
+
+     
+
+	.fSocial {
+    margin-left: 7%;
+} 
+
+
+
+
+.searchUp {
+    margin-top: -9px!important;
+}
+
+.fapad2 {
+    margin-left: 0%;
+}
+
+
+
+#sidebarHome {
+    margin-top: -7.5%;
+    padding-left: 0%;
+}
+
+
+.logo {
+    width: 119%!important;
+    height: 157%!important;
+    margin: 0!important;
+}
+
+.aside {
+    margin-top: -110%!important;
+    margin-left: -21%;
+}
+
+
+}
+
+
+@media all  and (min-width: 992px)  and (max-width: 1200px){  
+
+
+	  .padEnd {
+       padding: 0px!important;
+       left: 7px;
+       }      
+
+      .info992{
+      
+        padding: 0 1px 0 0px!important; 
+       }
+
+       .aside {
+        margin-top: -90%!important;
+        margin-left:  -12%;
+       }
+
+        #sidebarHome li{
+        width: 100%!important;
+      }    
+.fSocial {
+
+
+
+    margin-left: 28%;
+}
+
+
+
+.fapad2 {
+    margin-left: 4%;
+}
+
+ }
+ 

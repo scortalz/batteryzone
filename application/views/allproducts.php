@@ -32,7 +32,8 @@ body {
   width: 280px;
   min-height: 430px;
   background: #fff;
- 
+  padding: 3%;
+  margin: 3%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

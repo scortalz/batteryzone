@@ -33,7 +33,7 @@
 
             <?php foreach($selsubcategory as $subcat) {?>
                 <div class="col-md-5">
-                    <img class="img-responsive" src="<?php echo base_url().$subcaturl.$subcat['subcat_img'];?>">
+                    <img class="img-responsive imggSub"  src="<?php echo base_url().$subcaturl.$subcat['subcat_img'];?>">
                     <div class="subCatName">
                         <a href="<?php echo base_url();?>Home/allproducts/<?php echo $subcat['subcat_id'];?>"> <?php echo $subcat['subcat_name']; ?></a>
                     </div>

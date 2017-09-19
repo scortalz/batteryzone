@@ -21,6 +21,7 @@ Class Cmsdata extends CI_Model
       function getallproducts(){
             $this->db->select('*');
             $this->db->from('products');
+            $this->db->order_by('p_id', 'desc');
             $data=$this->db->get();
             return $data->result_array();
         }
